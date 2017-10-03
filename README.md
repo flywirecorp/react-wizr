@@ -39,7 +39,7 @@ const WizardPage = () => (
 ## Built With
 
 * [React](https://reactjs.org)
-* [React-](https://reactjs.org/docs/react-dom.html)
+* [ReactDOM](https://reactjs.org/docs/react-dom.html)
 
 ## Authors
 
