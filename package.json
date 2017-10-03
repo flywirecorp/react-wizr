@@ -1,0 +1,69 @@
+{
+  "name": "react-declarative-wizard",
+  "version": "1.0.0",
+  "main": "lib",
+  "scripts": {
+    "build": "babel lib -d build",
+    "lint": "eslint lib",
+    "prepublish": "npm run build",
+    "test": "jest",
+    "test:update": "npm run test -- -u",
+    "test:watch": "jest --watch"
+  },
+  "keywords": ["react", "wizard", "step", "multistep"],
+  "author": "Vicent Gozalbes <vigosan@gmail.com>",
+  "license": "MIT",
+  "description": "React library for building declarative wizards",
+  "babel": {
+    "presets": [
+      "env",
+      "stage-2",
+      "react"
+    ]
+  },
+  "eslintConfig": {
+    "parser": "babel-eslint",
+    "plugins": [
+      "react",
+      "prettier"
+    ],
+    "rules": {
+      "prettier/prettier": [
+        "error",
+        {
+          "singleQuote": true,
+          "semi": true
+        }
+      ]
+    }
+  },
+  "jest": {
+    "setupFiles": [
+      "<rootDir>/__tests__/config.js"
+    ],
+    "testMatch": [
+      "<rootDir>/lib/**/?(*.)(spec|test).js"
+    ]
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.0.1",
+    "babel-jest": "^21.2.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "enzyme": "^3.1.0",
+    "enzyme-adapter-react-16": "^1.0.1",
+    "eslint": "^4.8.0",
+    "eslint-plugin-prettier": "^2.3.1",
+    "eslint-plugin-react": "^7.4.0",
+    "jest": "^21.2.1",
+    "prettier": "^1.7.3",
+    "react-test-renderer": "^16.0.0"
+  },
+  "dependencies": {
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0"
+  }
+}
