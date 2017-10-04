@@ -1,9 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Wizard renders its children 1`] = `
+exports[`Wizard with no props renders its children 1`] = `
 ReactWrapper {
   "length": 1,
   Symbol(enzyme.__unrendered__): <Wizard
+    defaultActiveStepIndex={0}
     onStepChanged={[Function]}
   >
     <Steps>
@@ -229,6 +230,7 @@ ReactWrapper {
                   [Function]
                 </Step>
               </Steps>,
+              "defaultActiveStepIndex": 0,
               "onStepChanged": [Function],
             },
           },
@@ -241,6 +243,7 @@ ReactWrapper {
                   [Function]
                 </Step>
               </Steps>,
+              "defaultActiveStepIndex": 0,
               "onStepChanged": [Function],
             },
           },
@@ -305,6 +308,7 @@ ReactWrapper {
                               [Function]
                             </Step>
                           </Steps>,
+                          "defaultActiveStepIndex": 0,
                           "onStepChanged": [Function],
                         }
                       }
@@ -331,6 +335,7 @@ ReactWrapper {
                               [Function]
                             </Step>
                           </Steps>,
+                          "defaultActiveStepIndex": 0,
                           "onStepChanged": [Function],
                         }
                       }
@@ -535,6 +540,7 @@ ReactWrapper {
                         [Function]
                       </Step>
                     </Steps>,
+                    "defaultActiveStepIndex": 0,
                     "onStepChanged": [Function],
                   }
                 }
@@ -574,6 +580,7 @@ ReactWrapper {
                     [Function]
                   </Step>
                 </Steps>,
+                "defaultActiveStepIndex": 0,
                 "onStepChanged": [Function],
               },
             },
@@ -587,6 +594,7 @@ ReactWrapper {
                     [Function]
                   </Step>
                 </Steps>,
+                "defaultActiveStepIndex": 0,
                 "onStepChanged": [Function],
               },
             },
@@ -880,6 +888,7 @@ ReactWrapper {
               [Function]
             </Step>
           </Steps>,
+          "defaultActiveStepIndex": 0,
           "onStepChanged": [Function],
         },
         "memoizedState": Object {
@@ -1088,6 +1097,7 @@ ReactWrapper {
                   [Function]
                 </Step>
               </Steps>,
+              "defaultActiveStepIndex": 0,
               "onStepChanged": [Function],
             },
           },
@@ -1100,6 +1110,7 @@ ReactWrapper {
                   [Function]
                 </Step>
               </Steps>,
+              "defaultActiveStepIndex": 0,
               "onStepChanged": [Function],
             },
           },
@@ -1164,6 +1175,7 @@ ReactWrapper {
                               [Function]
                             </Step>
                           </Steps>,
+                          "defaultActiveStepIndex": 0,
                           "onStepChanged": [Function],
                         }
                       }
@@ -1190,6 +1202,7 @@ ReactWrapper {
                               [Function]
                             </Step>
                           </Steps>,
+                          "defaultActiveStepIndex": 0,
                           "onStepChanged": [Function],
                         }
                       }
@@ -1394,6 +1407,7 @@ ReactWrapper {
                         [Function]
                       </Step>
                     </Steps>,
+                    "defaultActiveStepIndex": 0,
                     "onStepChanged": [Function],
                   }
                 }
@@ -1433,6 +1447,7 @@ ReactWrapper {
                     [Function]
                   </Step>
                 </Steps>,
+                "defaultActiveStepIndex": 0,
                 "onStepChanged": [Function],
               },
             },
@@ -1446,6 +1461,7 @@ ReactWrapper {
                     [Function]
                   </Step>
                 </Steps>,
+                "defaultActiveStepIndex": 0,
                 "onStepChanged": [Function],
               },
             },
@@ -1476,6 +1492,7 @@ ReactWrapper {
             [Function]
           </Step>
         </Steps>,
+        "defaultActiveStepIndex": 0,
         "onStepChanged": [Function],
       },
       "refs": Object {},
@@ -1498,6 +1515,7 @@ ReactWrapper {
           [Function]
         </Step>
       </Steps>,
+      "defaultActiveStepIndex": 0,
       "onStepChanged": [Function],
     },
     "ref": null,
@@ -1753,6 +1771,7 @@ ReactWrapper {
                     [Function]
                   </Step>
                 </Steps>,
+                "defaultActiveStepIndex": 0,
                 "onStepChanged": [Function],
               },
             },
@@ -1765,6 +1784,7 @@ ReactWrapper {
                     [Function]
                   </Step>
                 </Steps>,
+                "defaultActiveStepIndex": 0,
                 "onStepChanged": [Function],
               },
             },
@@ -1829,6 +1849,7 @@ ReactWrapper {
                                 [Function]
                               </Step>
                             </Steps>,
+                            "defaultActiveStepIndex": 0,
                             "onStepChanged": [Function],
                           }
                         }
@@ -1855,6 +1876,7 @@ ReactWrapper {
                                 [Function]
                               </Step>
                             </Steps>,
+                            "defaultActiveStepIndex": 0,
                             "onStepChanged": [Function],
                           }
                         }
@@ -2059,6 +2081,7 @@ ReactWrapper {
                           [Function]
                         </Step>
                       </Steps>,
+                      "defaultActiveStepIndex": 0,
                       "onStepChanged": [Function],
                     }
                   }
@@ -2098,6 +2121,7 @@ ReactWrapper {
                       [Function]
                     </Step>
                   </Steps>,
+                  "defaultActiveStepIndex": 0,
                   "onStepChanged": [Function],
                 },
               },
@@ -2111,6 +2135,7 @@ ReactWrapper {
                       [Function]
                     </Step>
                   </Steps>,
+                  "defaultActiveStepIndex": 0,
                   "onStepChanged": [Function],
                 },
               },
@@ -2404,6 +2429,7 @@ ReactWrapper {
                 [Function]
               </Step>
             </Steps>,
+            "defaultActiveStepIndex": 0,
             "onStepChanged": [Function],
           },
           "memoizedState": Object {
@@ -2612,6 +2638,7 @@ ReactWrapper {
                     [Function]
                   </Step>
                 </Steps>,
+                "defaultActiveStepIndex": 0,
                 "onStepChanged": [Function],
               },
             },
@@ -2624,6 +2651,7 @@ ReactWrapper {
                     [Function]
                   </Step>
                 </Steps>,
+                "defaultActiveStepIndex": 0,
                 "onStepChanged": [Function],
               },
             },
@@ -2688,6 +2716,7 @@ ReactWrapper {
                                 [Function]
                               </Step>
                             </Steps>,
+                            "defaultActiveStepIndex": 0,
                             "onStepChanged": [Function],
                           }
                         }
@@ -2714,6 +2743,7 @@ ReactWrapper {
                                 [Function]
                               </Step>
                             </Steps>,
+                            "defaultActiveStepIndex": 0,
                             "onStepChanged": [Function],
                           }
                         }
@@ -2918,6 +2948,7 @@ ReactWrapper {
                           [Function]
                         </Step>
                       </Steps>,
+                      "defaultActiveStepIndex": 0,
                       "onStepChanged": [Function],
                     }
                   }
@@ -2957,6 +2988,7 @@ ReactWrapper {
                       [Function]
                     </Step>
                   </Steps>,
+                  "defaultActiveStepIndex": 0,
                   "onStepChanged": [Function],
                 },
               },
@@ -2970,6 +3002,7 @@ ReactWrapper {
                       [Function]
                     </Step>
                   </Steps>,
+                  "defaultActiveStepIndex": 0,
                   "onStepChanged": [Function],
                 },
               },
@@ -3000,6 +3033,7 @@ ReactWrapper {
               [Function]
             </Step>
           </Steps>,
+          "defaultActiveStepIndex": 0,
           "onStepChanged": [Function],
         },
         "refs": Object {},
@@ -3022,6 +3056,7 @@ ReactWrapper {
             [Function]
           </Step>
         </Steps>,
+        "defaultActiveStepIndex": 0,
         "onStepChanged": [Function],
       },
       "ref": null,
