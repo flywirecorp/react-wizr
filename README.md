@@ -1,4 +1,4 @@
-# react-wiz
+# react-wizr
 
 React library for building declarative wizards
 
