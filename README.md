@@ -19,16 +19,14 @@ const WizardPage = () => (
             }}
           />
         </Step>
-        <Step path="payment-info">
+        <Step path="customer-info">
           <CustomerInformationStep />
         </Step>
-        <Step path="payment-information">
+        <Step path="payment-info">
           <Navigation
             render={({ goToNextStep }) => {
               return (
-                <div>
-                  <PaymentMethodSelectionStep onSelected={goToNextStep} />
-                </div>
+                <PaymentMethodSelectionStep onSelected={goToNextStep} />
               );
             }}
           />

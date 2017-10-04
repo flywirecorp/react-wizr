@@ -27,6 +27,7 @@ ReactWrapper {
         "activeStepIndex": 0,
         "goToNextStep": [Function],
         "goToPrevStep": [Function],
+        "goToStep": [Function],
         "totalSteps": 1,
       },
       "_reactInternalFiber": FiberNode {
@@ -1486,6 +1487,7 @@ ReactWrapper {
       "context": Object {},
       "goToNextStep": [Function],
       "goToPrevStep": [Function],
+      "goToStep": [Function],
       "props": Object {
         "children": <Steps>
           <Step>
@@ -1568,6 +1570,7 @@ ReactWrapper {
           "activeStepIndex": 0,
           "goToNextStep": [Function],
           "goToPrevStep": [Function],
+          "goToStep": [Function],
           "totalSteps": 1,
         },
         "_reactInternalFiber": FiberNode {
@@ -3027,6 +3030,7 @@ ReactWrapper {
         "context": Object {},
         "goToNextStep": [Function],
         "goToPrevStep": [Function],
+        "goToStep": [Function],
         "props": Object {
           "children": <Steps>
             <Step>
