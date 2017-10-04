@@ -7,7 +7,10 @@ React library for building declarative wizards
 ```
 const WizardPage = () => (
   <div className="WizardPage">
-    <Wizard>
+    <Wizard
+      onStepChanged={({ activeStepIndex }) =>
+        console.log(`Step changed: ${activeStepIndex}`)}
+    >
       <Steps>
         <Step path="select-country">
           <Navigation
