@@ -1,6 +1,6 @@
 {
   "name": "react-wizr",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "lib",
   "scripts": {
     "build": "babel lib -d build",
@@ -10,7 +10,12 @@
     "test:update": "npm run test -- -u",
     "test:watch": "jest --watch"
   },
-  "keywords": ["react", "wizard", "step", "multistep"],
+  "keywords": [
+    "react",
+    "wizard",
+    "step",
+    "multistep"
+  ],
   "author": "Vicent Gozalbes <vigosan@gmail.com>",
   "license": "MIT",
   "description": "React library for building declarative wizards",
@@ -19,11 +24,18 @@
     "url": "https://github.com/vigosan/react-wizr"
   },
   "babel": {
-    "presets": ["env", "stage-2", "react"]
+    "presets": [
+      "env",
+      "stage-2",
+      "react"
+    ]
   },
   "eslintConfig": {
     "parser": "babel-eslint",
-    "plugins": ["react", "prettier"],
+    "plugins": [
+      "react",
+      "prettier"
+    ],
     "rules": {
       "prettier/prettier": [
         "error",
@@ -35,8 +47,12 @@
     }
   },
   "jest": {
-    "setupFiles": ["<rootDir>/__tests__/config.js"],
-    "testMatch": ["<rootDir>/lib/**/?(*.)(spec|test).js"]
+    "setupFiles": [
+      "<rootDir>/__tests__/config.js"
+    ],
+    "testMatch": [
+      "<rootDir>/lib/**/?(*.)(spec|test).js"
+    ]
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
