@@ -14,9 +14,6 @@ ReactWrapper {
       <Step>
         2
       </Step>
-      <Step>
-        3
-      </Step>
     </Steps>
   </Wizard>,
   Symbol(enzyme.__renderer__): Object {
@@ -34,7 +31,7 @@ ReactWrapper {
         "goToNextStep": [Function],
         "goToPrevStep": [Function],
         "goToStep": [Function],
-        "totalSteps": 3,
+        "totalSteps": 2,
       },
       "_reactInternalFiber": FiberNode {
         "_debugID": 4,
@@ -66,7 +63,7 @@ ReactWrapper {
                 "_debugSource": null,
                 "alternate": null,
                 "child": FiberNode {
-                  "_debugID": 10,
+                  "_debugID": 9,
                   "_debugIsCurrentlyTiming": false,
                   "_debugOwner": null,
                   "_debugSource": null,
@@ -113,7 +110,7 @@ ReactWrapper {
                   "_debugSource": null,
                   "alternate": null,
                   "child": FiberNode {
-                    "_debugID": 11,
+                    "_debugID": 10,
                     "_debugIsCurrentlyTiming": false,
                     "_debugOwner": null,
                     "_debugSource": null,
@@ -153,59 +150,7 @@ ReactWrapper {
                   "pendingWorkPriority": 0,
                   "ref": null,
                   "return": [Circular],
-                  "sibling": FiberNode {
-                    "_debugID": 9,
-                    "_debugIsCurrentlyTiming": false,
-                    "_debugOwner": null,
-                    "_debugSource": null,
-                    "alternate": null,
-                    "child": FiberNode {
-                      "_debugID": 12,
-                      "_debugIsCurrentlyTiming": false,
-                      "_debugOwner": null,
-                      "_debugSource": null,
-                      "alternate": null,
-                      "child": null,
-                      "effectTag": 0,
-                      "firstEffect": null,
-                      "index": 0,
-                      "internalContextTag": 0,
-                      "key": null,
-                      "lastEffect": null,
-                      "memoizedProps": "3",
-                      "memoizedState": null,
-                      "nextEffect": null,
-                      "pendingProps": null,
-                      "pendingWorkPriority": 0,
-                      "ref": null,
-                      "return": [Circular],
-                      "sibling": null,
-                      "stateNode": 3,
-                      "tag": 6,
-                      "type": null,
-                      "updateQueue": null,
-                    },
-                    "effectTag": 1,
-                    "firstEffect": null,
-                    "index": 2,
-                    "internalContextTag": 0,
-                    "key": null,
-                    "lastEffect": null,
-                    "memoizedProps": Object {
-                      "children": "3",
-                    },
-                    "memoizedState": null,
-                    "nextEffect": null,
-                    "pendingProps": null,
-                    "pendingWorkPriority": 0,
-                    "ref": null,
-                    "return": [Circular],
-                    "sibling": null,
-                    "stateNode": null,
-                    "tag": 1,
-                    "type": [Function],
-                    "updateQueue": null,
-                  },
+                  "sibling": null,
                   "stateNode": null,
                   "tag": 1,
                   "type": [Function],
@@ -229,9 +174,6 @@ ReactWrapper {
                   </Step>,
                   <Step>
                     2
-                  </Step>,
-                  <Step>
-                    3
                   </Step>,
                 ],
               },
@@ -261,9 +203,6 @@ ReactWrapper {
                 <Step>
                   2
                 </Step>
-                <Step>
-                  3
-                </Step>
               </Steps>,
               "className": undefined,
             },
@@ -277,7 +216,6 @@ ReactWrapper {
             "stateNode": <div>
               1
               2
-              3
             </div>,
             "tag": 5,
             "type": "div",
@@ -305,7 +243,7 @@ ReactWrapper {
                 "_debugSource": null,
                 "alternate": null,
                 "child": FiberNode {
-                  "_debugID": 10,
+                  "_debugID": 9,
                   "_debugIsCurrentlyTiming": false,
                   "_debugOwner": null,
                   "_debugSource": null,
@@ -352,7 +290,7 @@ ReactWrapper {
                   "_debugSource": null,
                   "alternate": null,
                   "child": FiberNode {
-                    "_debugID": 11,
+                    "_debugID": 10,
                     "_debugIsCurrentlyTiming": false,
                     "_debugOwner": null,
                     "_debugSource": null,
@@ -392,59 +330,7 @@ ReactWrapper {
                   "pendingWorkPriority": 0,
                   "ref": null,
                   "return": [Circular],
-                  "sibling": FiberNode {
-                    "_debugID": 9,
-                    "_debugIsCurrentlyTiming": false,
-                    "_debugOwner": null,
-                    "_debugSource": null,
-                    "alternate": null,
-                    "child": FiberNode {
-                      "_debugID": 12,
-                      "_debugIsCurrentlyTiming": false,
-                      "_debugOwner": null,
-                      "_debugSource": null,
-                      "alternate": null,
-                      "child": null,
-                      "effectTag": 0,
-                      "firstEffect": null,
-                      "index": 0,
-                      "internalContextTag": 0,
-                      "key": null,
-                      "lastEffect": null,
-                      "memoizedProps": "3",
-                      "memoizedState": null,
-                      "nextEffect": null,
-                      "pendingProps": null,
-                      "pendingWorkPriority": 0,
-                      "ref": null,
-                      "return": [Circular],
-                      "sibling": null,
-                      "stateNode": 3,
-                      "tag": 6,
-                      "type": null,
-                      "updateQueue": null,
-                    },
-                    "effectTag": 1,
-                    "firstEffect": null,
-                    "index": 2,
-                    "internalContextTag": 0,
-                    "key": null,
-                    "lastEffect": null,
-                    "memoizedProps": Object {
-                      "children": "3",
-                    },
-                    "memoizedState": null,
-                    "nextEffect": null,
-                    "pendingProps": null,
-                    "pendingWorkPriority": 0,
-                    "ref": null,
-                    "return": [Circular],
-                    "sibling": null,
-                    "stateNode": null,
-                    "tag": 1,
-                    "type": [Function],
-                    "updateQueue": null,
-                  },
+                  "sibling": null,
                   "stateNode": null,
                   "tag": 1,
                   "type": [Function],
@@ -468,9 +354,6 @@ ReactWrapper {
                   </Step>,
                   <Step>
                     2
-                  </Step>,
-                  <Step>
-                    3
                   </Step>,
                 ],
               },
@@ -500,9 +383,6 @@ ReactWrapper {
                 <Step>
                   2
                 </Step>
-                <Step>
-                  3
-                </Step>
               </Steps>,
               "className": undefined,
             },
@@ -516,7 +396,6 @@ ReactWrapper {
             "stateNode": <div>
               1
               2
-              3
             </div>,
             "tag": 5,
             "type": "div",
@@ -533,9 +412,6 @@ ReactWrapper {
                 <Step>
                   2
                 </Step>
-                <Step>
-                  3
-                </Step>
               </Steps>,
               "defaultActiveStepIndex": 0,
               "onStepChanged": [Function],
@@ -551,9 +427,6 @@ ReactWrapper {
                 </Step>
                 <Step>
                   2
-                </Step>
-                <Step>
-                  3
                 </Step>
               </Steps>,
               "defaultActiveStepIndex": 0,
@@ -595,7 +468,6 @@ ReactWrapper {
                   <div>
                     1
                     2
-                    3
                   </div>
                 </div>,
                 "context": Object {},
@@ -627,9 +499,6 @@ ReactWrapper {
                             <Step>
                               2
                             </Step>
-                            <Step>
-                              3
-                            </Step>
                           </Steps>,
                           "defaultActiveStepIndex": 0,
                           "onStepChanged": [Function],
@@ -659,9 +528,6 @@ ReactWrapper {
                             </Step>
                             <Step>
                               2
-                            </Step>
-                            <Step>
-                              3
                             </Step>
                           </Steps>,
                           "defaultActiveStepIndex": 0,
@@ -695,7 +561,7 @@ ReactWrapper {
                   "_debugSource": null,
                   "alternate": null,
                   "child": FiberNode {
-                    "_debugID": 10,
+                    "_debugID": 9,
                     "_debugIsCurrentlyTiming": false,
                     "_debugOwner": null,
                     "_debugSource": null,
@@ -742,7 +608,7 @@ ReactWrapper {
                     "_debugSource": null,
                     "alternate": null,
                     "child": FiberNode {
-                      "_debugID": 11,
+                      "_debugID": 10,
                       "_debugIsCurrentlyTiming": false,
                       "_debugOwner": null,
                       "_debugSource": null,
@@ -782,59 +648,7 @@ ReactWrapper {
                     "pendingWorkPriority": 0,
                     "ref": null,
                     "return": [Circular],
-                    "sibling": FiberNode {
-                      "_debugID": 9,
-                      "_debugIsCurrentlyTiming": false,
-                      "_debugOwner": null,
-                      "_debugSource": null,
-                      "alternate": null,
-                      "child": FiberNode {
-                        "_debugID": 12,
-                        "_debugIsCurrentlyTiming": false,
-                        "_debugOwner": null,
-                        "_debugSource": null,
-                        "alternate": null,
-                        "child": null,
-                        "effectTag": 0,
-                        "firstEffect": null,
-                        "index": 0,
-                        "internalContextTag": 0,
-                        "key": null,
-                        "lastEffect": null,
-                        "memoizedProps": "3",
-                        "memoizedState": null,
-                        "nextEffect": null,
-                        "pendingProps": null,
-                        "pendingWorkPriority": 0,
-                        "ref": null,
-                        "return": [Circular],
-                        "sibling": null,
-                        "stateNode": 3,
-                        "tag": 6,
-                        "type": null,
-                        "updateQueue": null,
-                      },
-                      "effectTag": 1,
-                      "firstEffect": null,
-                      "index": 2,
-                      "internalContextTag": 0,
-                      "key": null,
-                      "lastEffect": null,
-                      "memoizedProps": Object {
-                        "children": "3",
-                      },
-                      "memoizedState": null,
-                      "nextEffect": null,
-                      "pendingProps": null,
-                      "pendingWorkPriority": 0,
-                      "ref": null,
-                      "return": [Circular],
-                      "sibling": null,
-                      "stateNode": null,
-                      "tag": 1,
-                      "type": [Function],
-                      "updateQueue": null,
-                    },
+                    "sibling": null,
                     "stateNode": null,
                     "tag": 1,
                     "type": [Function],
@@ -858,9 +672,6 @@ ReactWrapper {
                     </Step>,
                     <Step>
                       2
-                    </Step>,
-                    <Step>
-                      3
                     </Step>,
                   ],
                 },
@@ -890,9 +701,6 @@ ReactWrapper {
                   <Step>
                     2
                   </Step>
-                  <Step>
-                    3
-                  </Step>
                 </Steps>,
                 "className": undefined,
               },
@@ -906,7 +714,6 @@ ReactWrapper {
               "stateNode": <div>
                 1
                 2
-                3
               </div>,
               "tag": 5,
               "type": "div",
@@ -934,7 +741,7 @@ ReactWrapper {
                   "_debugSource": null,
                   "alternate": null,
                   "child": FiberNode {
-                    "_debugID": 10,
+                    "_debugID": 9,
                     "_debugIsCurrentlyTiming": false,
                     "_debugOwner": null,
                     "_debugSource": null,
@@ -981,7 +788,7 @@ ReactWrapper {
                     "_debugSource": null,
                     "alternate": null,
                     "child": FiberNode {
-                      "_debugID": 11,
+                      "_debugID": 10,
                       "_debugIsCurrentlyTiming": false,
                       "_debugOwner": null,
                       "_debugSource": null,
@@ -1021,59 +828,7 @@ ReactWrapper {
                     "pendingWorkPriority": 0,
                     "ref": null,
                     "return": [Circular],
-                    "sibling": FiberNode {
-                      "_debugID": 9,
-                      "_debugIsCurrentlyTiming": false,
-                      "_debugOwner": null,
-                      "_debugSource": null,
-                      "alternate": null,
-                      "child": FiberNode {
-                        "_debugID": 12,
-                        "_debugIsCurrentlyTiming": false,
-                        "_debugOwner": null,
-                        "_debugSource": null,
-                        "alternate": null,
-                        "child": null,
-                        "effectTag": 0,
-                        "firstEffect": null,
-                        "index": 0,
-                        "internalContextTag": 0,
-                        "key": null,
-                        "lastEffect": null,
-                        "memoizedProps": "3",
-                        "memoizedState": null,
-                        "nextEffect": null,
-                        "pendingProps": null,
-                        "pendingWorkPriority": 0,
-                        "ref": null,
-                        "return": [Circular],
-                        "sibling": null,
-                        "stateNode": 3,
-                        "tag": 6,
-                        "type": null,
-                        "updateQueue": null,
-                      },
-                      "effectTag": 1,
-                      "firstEffect": null,
-                      "index": 2,
-                      "internalContextTag": 0,
-                      "key": null,
-                      "lastEffect": null,
-                      "memoizedProps": Object {
-                        "children": "3",
-                      },
-                      "memoizedState": null,
-                      "nextEffect": null,
-                      "pendingProps": null,
-                      "pendingWorkPriority": 0,
-                      "ref": null,
-                      "return": [Circular],
-                      "sibling": null,
-                      "stateNode": null,
-                      "tag": 1,
-                      "type": [Function],
-                      "updateQueue": null,
-                    },
+                    "sibling": null,
                     "stateNode": null,
                     "tag": 1,
                     "type": [Function],
@@ -1097,9 +852,6 @@ ReactWrapper {
                     </Step>,
                     <Step>
                       2
-                    </Step>,
-                    <Step>
-                      3
                     </Step>,
                   ],
                 },
@@ -1129,9 +881,6 @@ ReactWrapper {
                   <Step>
                     2
                   </Step>
-                  <Step>
-                    3
-                  </Step>
                 </Steps>,
                 "className": undefined,
               },
@@ -1145,7 +894,6 @@ ReactWrapper {
               "stateNode": <div>
                 1
                 2
-                3
               </div>,
               "tag": 5,
               "type": "div",
@@ -1165,9 +913,6 @@ ReactWrapper {
                       <Step>
                         2
                       </Step>
-                      <Step>
-                        3
-                      </Step>
                     </Steps>,
                     "defaultActiveStepIndex": 0,
                     "onStepChanged": [Function],
@@ -1186,7 +931,6 @@ ReactWrapper {
                 <div>
                   1
                   2
-                  3
                 </div>
               </div>,
               "context": Object {},
@@ -1215,9 +959,6 @@ ReactWrapper {
                   <Step>
                     2
                   </Step>
-                  <Step>
-                    3
-                  </Step>
                 </Steps>,
                 "defaultActiveStepIndex": 0,
                 "onStepChanged": [Function],
@@ -1234,9 +975,6 @@ ReactWrapper {
                   </Step>
                   <Step>
                     2
-                  </Step>
-                  <Step>
-                    3
                   </Step>
                 </Steps>,
                 "defaultActiveStepIndex": 0,
@@ -1275,7 +1013,7 @@ ReactWrapper {
               "_debugSource": null,
               "alternate": null,
               "child": FiberNode {
-                "_debugID": 10,
+                "_debugID": 9,
                 "_debugIsCurrentlyTiming": false,
                 "_debugOwner": null,
                 "_debugSource": null,
@@ -1322,7 +1060,7 @@ ReactWrapper {
                 "_debugSource": null,
                 "alternate": null,
                 "child": FiberNode {
-                  "_debugID": 11,
+                  "_debugID": 10,
                   "_debugIsCurrentlyTiming": false,
                   "_debugOwner": null,
                   "_debugSource": null,
@@ -1362,59 +1100,7 @@ ReactWrapper {
                 "pendingWorkPriority": 0,
                 "ref": null,
                 "return": [Circular],
-                "sibling": FiberNode {
-                  "_debugID": 9,
-                  "_debugIsCurrentlyTiming": false,
-                  "_debugOwner": null,
-                  "_debugSource": null,
-                  "alternate": null,
-                  "child": FiberNode {
-                    "_debugID": 12,
-                    "_debugIsCurrentlyTiming": false,
-                    "_debugOwner": null,
-                    "_debugSource": null,
-                    "alternate": null,
-                    "child": null,
-                    "effectTag": 0,
-                    "firstEffect": null,
-                    "index": 0,
-                    "internalContextTag": 0,
-                    "key": null,
-                    "lastEffect": null,
-                    "memoizedProps": "3",
-                    "memoizedState": null,
-                    "nextEffect": null,
-                    "pendingProps": null,
-                    "pendingWorkPriority": 0,
-                    "ref": null,
-                    "return": [Circular],
-                    "sibling": null,
-                    "stateNode": 3,
-                    "tag": 6,
-                    "type": null,
-                    "updateQueue": null,
-                  },
-                  "effectTag": 1,
-                  "firstEffect": null,
-                  "index": 2,
-                  "internalContextTag": 0,
-                  "key": null,
-                  "lastEffect": null,
-                  "memoizedProps": Object {
-                    "children": "3",
-                  },
-                  "memoizedState": null,
-                  "nextEffect": null,
-                  "pendingProps": null,
-                  "pendingWorkPriority": 0,
-                  "ref": null,
-                  "return": [Circular],
-                  "sibling": null,
-                  "stateNode": null,
-                  "tag": 1,
-                  "type": [Function],
-                  "updateQueue": null,
-                },
+                "sibling": null,
                 "stateNode": null,
                 "tag": 1,
                 "type": [Function],
@@ -1438,9 +1124,6 @@ ReactWrapper {
                 </Step>,
                 <Step>
                   2
-                </Step>,
-                <Step>
-                  3
                 </Step>,
               ],
             },
@@ -1470,9 +1153,6 @@ ReactWrapper {
               <Step>
                 2
               </Step>
-              <Step>
-                3
-              </Step>
             </Steps>,
             "className": undefined,
           },
@@ -1486,7 +1166,6 @@ ReactWrapper {
           "stateNode": <div>
             1
             2
-            3
           </div>,
           "tag": 5,
           "type": "div",
@@ -1512,7 +1191,7 @@ ReactWrapper {
               "_debugSource": null,
               "alternate": null,
               "child": FiberNode {
-                "_debugID": 10,
+                "_debugID": 9,
                 "_debugIsCurrentlyTiming": false,
                 "_debugOwner": null,
                 "_debugSource": null,
@@ -1559,7 +1238,7 @@ ReactWrapper {
                 "_debugSource": null,
                 "alternate": null,
                 "child": FiberNode {
-                  "_debugID": 11,
+                  "_debugID": 10,
                   "_debugIsCurrentlyTiming": false,
                   "_debugOwner": null,
                   "_debugSource": null,
@@ -1599,59 +1278,7 @@ ReactWrapper {
                 "pendingWorkPriority": 0,
                 "ref": null,
                 "return": [Circular],
-                "sibling": FiberNode {
-                  "_debugID": 9,
-                  "_debugIsCurrentlyTiming": false,
-                  "_debugOwner": null,
-                  "_debugSource": null,
-                  "alternate": null,
-                  "child": FiberNode {
-                    "_debugID": 12,
-                    "_debugIsCurrentlyTiming": false,
-                    "_debugOwner": null,
-                    "_debugSource": null,
-                    "alternate": null,
-                    "child": null,
-                    "effectTag": 0,
-                    "firstEffect": null,
-                    "index": 0,
-                    "internalContextTag": 0,
-                    "key": null,
-                    "lastEffect": null,
-                    "memoizedProps": "3",
-                    "memoizedState": null,
-                    "nextEffect": null,
-                    "pendingProps": null,
-                    "pendingWorkPriority": 0,
-                    "ref": null,
-                    "return": [Circular],
-                    "sibling": null,
-                    "stateNode": 3,
-                    "tag": 6,
-                    "type": null,
-                    "updateQueue": null,
-                  },
-                  "effectTag": 1,
-                  "firstEffect": null,
-                  "index": 2,
-                  "internalContextTag": 0,
-                  "key": null,
-                  "lastEffect": null,
-                  "memoizedProps": Object {
-                    "children": "3",
-                  },
-                  "memoizedState": null,
-                  "nextEffect": null,
-                  "pendingProps": null,
-                  "pendingWorkPriority": 0,
-                  "ref": null,
-                  "return": [Circular],
-                  "sibling": null,
-                  "stateNode": null,
-                  "tag": 1,
-                  "type": [Function],
-                  "updateQueue": null,
-                },
+                "sibling": null,
                 "stateNode": null,
                 "tag": 1,
                 "type": [Function],
@@ -1675,9 +1302,6 @@ ReactWrapper {
                 </Step>,
                 <Step>
                   2
-                </Step>,
-                <Step>
-                  3
                 </Step>,
               ],
             },
@@ -1707,9 +1331,6 @@ ReactWrapper {
               <Step>
                 2
               </Step>
-              <Step>
-                3
-              </Step>
             </Steps>,
             "className": undefined,
           },
@@ -1723,7 +1344,6 @@ ReactWrapper {
           "stateNode": <div>
             1
             2
-            3
           </div>,
           "tag": 5,
           "type": "div",
@@ -1751,7 +1371,7 @@ ReactWrapper {
               "_debugSource": null,
               "alternate": null,
               "child": FiberNode {
-                "_debugID": 10,
+                "_debugID": 9,
                 "_debugIsCurrentlyTiming": false,
                 "_debugOwner": null,
                 "_debugSource": null,
@@ -1798,7 +1418,7 @@ ReactWrapper {
                 "_debugSource": null,
                 "alternate": null,
                 "child": FiberNode {
-                  "_debugID": 11,
+                  "_debugID": 10,
                   "_debugIsCurrentlyTiming": false,
                   "_debugOwner": null,
                   "_debugSource": null,
@@ -1838,59 +1458,7 @@ ReactWrapper {
                 "pendingWorkPriority": 0,
                 "ref": null,
                 "return": [Circular],
-                "sibling": FiberNode {
-                  "_debugID": 9,
-                  "_debugIsCurrentlyTiming": false,
-                  "_debugOwner": null,
-                  "_debugSource": null,
-                  "alternate": null,
-                  "child": FiberNode {
-                    "_debugID": 12,
-                    "_debugIsCurrentlyTiming": false,
-                    "_debugOwner": null,
-                    "_debugSource": null,
-                    "alternate": null,
-                    "child": null,
-                    "effectTag": 0,
-                    "firstEffect": null,
-                    "index": 0,
-                    "internalContextTag": 0,
-                    "key": null,
-                    "lastEffect": null,
-                    "memoizedProps": "3",
-                    "memoizedState": null,
-                    "nextEffect": null,
-                    "pendingProps": null,
-                    "pendingWorkPriority": 0,
-                    "ref": null,
-                    "return": [Circular],
-                    "sibling": null,
-                    "stateNode": 3,
-                    "tag": 6,
-                    "type": null,
-                    "updateQueue": null,
-                  },
-                  "effectTag": 1,
-                  "firstEffect": null,
-                  "index": 2,
-                  "internalContextTag": 0,
-                  "key": null,
-                  "lastEffect": null,
-                  "memoizedProps": Object {
-                    "children": "3",
-                  },
-                  "memoizedState": null,
-                  "nextEffect": null,
-                  "pendingProps": null,
-                  "pendingWorkPriority": 0,
-                  "ref": null,
-                  "return": [Circular],
-                  "sibling": null,
-                  "stateNode": null,
-                  "tag": 1,
-                  "type": [Function],
-                  "updateQueue": null,
-                },
+                "sibling": null,
                 "stateNode": null,
                 "tag": 1,
                 "type": [Function],
@@ -1914,9 +1482,6 @@ ReactWrapper {
                 </Step>,
                 <Step>
                   2
-                </Step>,
-                <Step>
-                  3
                 </Step>,
               ],
             },
@@ -1946,9 +1511,6 @@ ReactWrapper {
               <Step>
                 2
               </Step>
-              <Step>
-                3
-              </Step>
             </Steps>,
             "className": undefined,
           },
@@ -1962,7 +1524,6 @@ ReactWrapper {
           "stateNode": <div>
             1
             2
-            3
           </div>,
           "tag": 5,
           "type": "div",
@@ -1976,16 +1537,13 @@ ReactWrapper {
             <Step>
               2
             </Step>
-            <Step>
-              3
-            </Step>
           </Steps>,
           "defaultActiveStepIndex": 0,
           "onStepChanged": [Function],
         },
         "memoizedState": Object {
           "activeStepIndex": 0,
-          "totalSteps": 3,
+          "totalSteps": 2,
         },
         "nextEffect": null,
         "pendingProps": null,
@@ -2018,7 +1576,7 @@ ReactWrapper {
                 "_debugSource": null,
                 "alternate": null,
                 "child": FiberNode {
-                  "_debugID": 10,
+                  "_debugID": 9,
                   "_debugIsCurrentlyTiming": false,
                   "_debugOwner": null,
                   "_debugSource": null,
@@ -2065,7 +1623,7 @@ ReactWrapper {
                   "_debugSource": null,
                   "alternate": null,
                   "child": FiberNode {
-                    "_debugID": 11,
+                    "_debugID": 10,
                     "_debugIsCurrentlyTiming": false,
                     "_debugOwner": null,
                     "_debugSource": null,
@@ -2105,59 +1663,7 @@ ReactWrapper {
                   "pendingWorkPriority": 0,
                   "ref": null,
                   "return": [Circular],
-                  "sibling": FiberNode {
-                    "_debugID": 9,
-                    "_debugIsCurrentlyTiming": false,
-                    "_debugOwner": null,
-                    "_debugSource": null,
-                    "alternate": null,
-                    "child": FiberNode {
-                      "_debugID": 12,
-                      "_debugIsCurrentlyTiming": false,
-                      "_debugOwner": null,
-                      "_debugSource": null,
-                      "alternate": null,
-                      "child": null,
-                      "effectTag": 0,
-                      "firstEffect": null,
-                      "index": 0,
-                      "internalContextTag": 0,
-                      "key": null,
-                      "lastEffect": null,
-                      "memoizedProps": "3",
-                      "memoizedState": null,
-                      "nextEffect": null,
-                      "pendingProps": null,
-                      "pendingWorkPriority": 0,
-                      "ref": null,
-                      "return": [Circular],
-                      "sibling": null,
-                      "stateNode": 3,
-                      "tag": 6,
-                      "type": null,
-                      "updateQueue": null,
-                    },
-                    "effectTag": 1,
-                    "firstEffect": null,
-                    "index": 2,
-                    "internalContextTag": 0,
-                    "key": null,
-                    "lastEffect": null,
-                    "memoizedProps": Object {
-                      "children": "3",
-                    },
-                    "memoizedState": null,
-                    "nextEffect": null,
-                    "pendingProps": null,
-                    "pendingWorkPriority": 0,
-                    "ref": null,
-                    "return": [Circular],
-                    "sibling": null,
-                    "stateNode": null,
-                    "tag": 1,
-                    "type": [Function],
-                    "updateQueue": null,
-                  },
+                  "sibling": null,
                   "stateNode": null,
                   "tag": 1,
                   "type": [Function],
@@ -2181,9 +1687,6 @@ ReactWrapper {
                   </Step>,
                   <Step>
                     2
-                  </Step>,
-                  <Step>
-                    3
                   </Step>,
                 ],
               },
@@ -2213,9 +1716,6 @@ ReactWrapper {
                 <Step>
                   2
                 </Step>
-                <Step>
-                  3
-                </Step>
               </Steps>,
               "className": undefined,
             },
@@ -2229,7 +1729,6 @@ ReactWrapper {
             "stateNode": <div>
               1
               2
-              3
             </div>,
             "tag": 5,
             "type": "div",
@@ -2257,7 +1756,7 @@ ReactWrapper {
                 "_debugSource": null,
                 "alternate": null,
                 "child": FiberNode {
-                  "_debugID": 10,
+                  "_debugID": 9,
                   "_debugIsCurrentlyTiming": false,
                   "_debugOwner": null,
                   "_debugSource": null,
@@ -2304,7 +1803,7 @@ ReactWrapper {
                   "_debugSource": null,
                   "alternate": null,
                   "child": FiberNode {
-                    "_debugID": 11,
+                    "_debugID": 10,
                     "_debugIsCurrentlyTiming": false,
                     "_debugOwner": null,
                     "_debugSource": null,
@@ -2344,59 +1843,7 @@ ReactWrapper {
                   "pendingWorkPriority": 0,
                   "ref": null,
                   "return": [Circular],
-                  "sibling": FiberNode {
-                    "_debugID": 9,
-                    "_debugIsCurrentlyTiming": false,
-                    "_debugOwner": null,
-                    "_debugSource": null,
-                    "alternate": null,
-                    "child": FiberNode {
-                      "_debugID": 12,
-                      "_debugIsCurrentlyTiming": false,
-                      "_debugOwner": null,
-                      "_debugSource": null,
-                      "alternate": null,
-                      "child": null,
-                      "effectTag": 0,
-                      "firstEffect": null,
-                      "index": 0,
-                      "internalContextTag": 0,
-                      "key": null,
-                      "lastEffect": null,
-                      "memoizedProps": "3",
-                      "memoizedState": null,
-                      "nextEffect": null,
-                      "pendingProps": null,
-                      "pendingWorkPriority": 0,
-                      "ref": null,
-                      "return": [Circular],
-                      "sibling": null,
-                      "stateNode": 3,
-                      "tag": 6,
-                      "type": null,
-                      "updateQueue": null,
-                    },
-                    "effectTag": 1,
-                    "firstEffect": null,
-                    "index": 2,
-                    "internalContextTag": 0,
-                    "key": null,
-                    "lastEffect": null,
-                    "memoizedProps": Object {
-                      "children": "3",
-                    },
-                    "memoizedState": null,
-                    "nextEffect": null,
-                    "pendingProps": null,
-                    "pendingWorkPriority": 0,
-                    "ref": null,
-                    "return": [Circular],
-                    "sibling": null,
-                    "stateNode": null,
-                    "tag": 1,
-                    "type": [Function],
-                    "updateQueue": null,
-                  },
+                  "sibling": null,
                   "stateNode": null,
                   "tag": 1,
                   "type": [Function],
@@ -2420,9 +1867,6 @@ ReactWrapper {
                   </Step>,
                   <Step>
                     2
-                  </Step>,
-                  <Step>
-                    3
                   </Step>,
                 ],
               },
@@ -2452,9 +1896,6 @@ ReactWrapper {
                 <Step>
                   2
                 </Step>
-                <Step>
-                  3
-                </Step>
               </Steps>,
               "className": undefined,
             },
@@ -2468,7 +1909,6 @@ ReactWrapper {
             "stateNode": <div>
               1
               2
-              3
             </div>,
             "tag": 5,
             "type": "div",
@@ -2485,9 +1925,6 @@ ReactWrapper {
                 <Step>
                   2
                 </Step>
-                <Step>
-                  3
-                </Step>
               </Steps>,
               "defaultActiveStepIndex": 0,
               "onStepChanged": [Function],
@@ -2503,9 +1940,6 @@ ReactWrapper {
                 </Step>
                 <Step>
                   2
-                </Step>
-                <Step>
-                  3
                 </Step>
               </Steps>,
               "defaultActiveStepIndex": 0,
@@ -2547,7 +1981,6 @@ ReactWrapper {
                   <div>
                     1
                     2
-                    3
                   </div>
                 </div>,
                 "context": Object {},
@@ -2579,9 +2012,6 @@ ReactWrapper {
                             <Step>
                               2
                             </Step>
-                            <Step>
-                              3
-                            </Step>
                           </Steps>,
                           "defaultActiveStepIndex": 0,
                           "onStepChanged": [Function],
@@ -2611,9 +2041,6 @@ ReactWrapper {
                             </Step>
                             <Step>
                               2
-                            </Step>
-                            <Step>
-                              3
                             </Step>
                           </Steps>,
                           "defaultActiveStepIndex": 0,
@@ -2647,7 +2074,7 @@ ReactWrapper {
                   "_debugSource": null,
                   "alternate": null,
                   "child": FiberNode {
-                    "_debugID": 10,
+                    "_debugID": 9,
                     "_debugIsCurrentlyTiming": false,
                     "_debugOwner": null,
                     "_debugSource": null,
@@ -2694,7 +2121,7 @@ ReactWrapper {
                     "_debugSource": null,
                     "alternate": null,
                     "child": FiberNode {
-                      "_debugID": 11,
+                      "_debugID": 10,
                       "_debugIsCurrentlyTiming": false,
                       "_debugOwner": null,
                       "_debugSource": null,
@@ -2734,59 +2161,7 @@ ReactWrapper {
                     "pendingWorkPriority": 0,
                     "ref": null,
                     "return": [Circular],
-                    "sibling": FiberNode {
-                      "_debugID": 9,
-                      "_debugIsCurrentlyTiming": false,
-                      "_debugOwner": null,
-                      "_debugSource": null,
-                      "alternate": null,
-                      "child": FiberNode {
-                        "_debugID": 12,
-                        "_debugIsCurrentlyTiming": false,
-                        "_debugOwner": null,
-                        "_debugSource": null,
-                        "alternate": null,
-                        "child": null,
-                        "effectTag": 0,
-                        "firstEffect": null,
-                        "index": 0,
-                        "internalContextTag": 0,
-                        "key": null,
-                        "lastEffect": null,
-                        "memoizedProps": "3",
-                        "memoizedState": null,
-                        "nextEffect": null,
-                        "pendingProps": null,
-                        "pendingWorkPriority": 0,
-                        "ref": null,
-                        "return": [Circular],
-                        "sibling": null,
-                        "stateNode": 3,
-                        "tag": 6,
-                        "type": null,
-                        "updateQueue": null,
-                      },
-                      "effectTag": 1,
-                      "firstEffect": null,
-                      "index": 2,
-                      "internalContextTag": 0,
-                      "key": null,
-                      "lastEffect": null,
-                      "memoizedProps": Object {
-                        "children": "3",
-                      },
-                      "memoizedState": null,
-                      "nextEffect": null,
-                      "pendingProps": null,
-                      "pendingWorkPriority": 0,
-                      "ref": null,
-                      "return": [Circular],
-                      "sibling": null,
-                      "stateNode": null,
-                      "tag": 1,
-                      "type": [Function],
-                      "updateQueue": null,
-                    },
+                    "sibling": null,
                     "stateNode": null,
                     "tag": 1,
                     "type": [Function],
@@ -2810,9 +2185,6 @@ ReactWrapper {
                     </Step>,
                     <Step>
                       2
-                    </Step>,
-                    <Step>
-                      3
                     </Step>,
                   ],
                 },
@@ -2842,9 +2214,6 @@ ReactWrapper {
                   <Step>
                     2
                   </Step>
-                  <Step>
-                    3
-                  </Step>
                 </Steps>,
                 "className": undefined,
               },
@@ -2858,7 +2227,6 @@ ReactWrapper {
               "stateNode": <div>
                 1
                 2
-                3
               </div>,
               "tag": 5,
               "type": "div",
@@ -2886,7 +2254,7 @@ ReactWrapper {
                   "_debugSource": null,
                   "alternate": null,
                   "child": FiberNode {
-                    "_debugID": 10,
+                    "_debugID": 9,
                     "_debugIsCurrentlyTiming": false,
                     "_debugOwner": null,
                     "_debugSource": null,
@@ -2933,7 +2301,7 @@ ReactWrapper {
                     "_debugSource": null,
                     "alternate": null,
                     "child": FiberNode {
-                      "_debugID": 11,
+                      "_debugID": 10,
                       "_debugIsCurrentlyTiming": false,
                       "_debugOwner": null,
                       "_debugSource": null,
@@ -2973,59 +2341,7 @@ ReactWrapper {
                     "pendingWorkPriority": 0,
                     "ref": null,
                     "return": [Circular],
-                    "sibling": FiberNode {
-                      "_debugID": 9,
-                      "_debugIsCurrentlyTiming": false,
-                      "_debugOwner": null,
-                      "_debugSource": null,
-                      "alternate": null,
-                      "child": FiberNode {
-                        "_debugID": 12,
-                        "_debugIsCurrentlyTiming": false,
-                        "_debugOwner": null,
-                        "_debugSource": null,
-                        "alternate": null,
-                        "child": null,
-                        "effectTag": 0,
-                        "firstEffect": null,
-                        "index": 0,
-                        "internalContextTag": 0,
-                        "key": null,
-                        "lastEffect": null,
-                        "memoizedProps": "3",
-                        "memoizedState": null,
-                        "nextEffect": null,
-                        "pendingProps": null,
-                        "pendingWorkPriority": 0,
-                        "ref": null,
-                        "return": [Circular],
-                        "sibling": null,
-                        "stateNode": 3,
-                        "tag": 6,
-                        "type": null,
-                        "updateQueue": null,
-                      },
-                      "effectTag": 1,
-                      "firstEffect": null,
-                      "index": 2,
-                      "internalContextTag": 0,
-                      "key": null,
-                      "lastEffect": null,
-                      "memoizedProps": Object {
-                        "children": "3",
-                      },
-                      "memoizedState": null,
-                      "nextEffect": null,
-                      "pendingProps": null,
-                      "pendingWorkPriority": 0,
-                      "ref": null,
-                      "return": [Circular],
-                      "sibling": null,
-                      "stateNode": null,
-                      "tag": 1,
-                      "type": [Function],
-                      "updateQueue": null,
-                    },
+                    "sibling": null,
                     "stateNode": null,
                     "tag": 1,
                     "type": [Function],
@@ -3049,9 +2365,6 @@ ReactWrapper {
                     </Step>,
                     <Step>
                       2
-                    </Step>,
-                    <Step>
-                      3
                     </Step>,
                   ],
                 },
@@ -3081,9 +2394,6 @@ ReactWrapper {
                   <Step>
                     2
                   </Step>
-                  <Step>
-                    3
-                  </Step>
                 </Steps>,
                 "className": undefined,
               },
@@ -3097,7 +2407,6 @@ ReactWrapper {
               "stateNode": <div>
                 1
                 2
-                3
               </div>,
               "tag": 5,
               "type": "div",
@@ -3117,9 +2426,6 @@ ReactWrapper {
                       <Step>
                         2
                       </Step>
-                      <Step>
-                        3
-                      </Step>
                     </Steps>,
                     "defaultActiveStepIndex": 0,
                     "onStepChanged": [Function],
@@ -3138,7 +2444,6 @@ ReactWrapper {
                 <div>
                   1
                   2
-                  3
                 </div>
               </div>,
               "context": Object {},
@@ -3167,9 +2472,6 @@ ReactWrapper {
                   <Step>
                     2
                   </Step>
-                  <Step>
-                    3
-                  </Step>
                 </Steps>,
                 "defaultActiveStepIndex": 0,
                 "onStepChanged": [Function],
@@ -3186,9 +2488,6 @@ ReactWrapper {
                   </Step>
                   <Step>
                     2
-                  </Step>
-                  <Step>
-                    3
                   </Step>
                 </Steps>,
                 "defaultActiveStepIndex": 0,
@@ -3226,9 +2525,6 @@ ReactWrapper {
           <Step>
             2
           </Step>
-          <Step>
-            3
-          </Step>
         </Steps>,
         "defaultActiveStepIndex": 0,
         "onStepChanged": [Function],
@@ -3236,7 +2532,7 @@ ReactWrapper {
       "refs": Object {},
       "state": Object {
         "activeStepIndex": 0,
-        "totalSteps": 3,
+        "totalSteps": 2,
       },
       "updater": Object {
         "enqueueForceUpdate": [Function],
@@ -3255,9 +2551,6 @@ ReactWrapper {
         <Step>
           2
         </Step>
-        <Step>
-          3
-        </Step>
       </Steps>,
       "defaultActiveStepIndex": 0,
       "onStepChanged": [Function],
@@ -3267,7 +2560,6 @@ ReactWrapper {
       "instance": <div>
         1
         2
-        3
       </div>,
       "key": null,
       "nodeType": "host",
@@ -3278,9 +2570,6 @@ ReactWrapper {
           </Step>
           <Step>
             2
-          </Step>
-          <Step>
-            3
           </Step>
         </Steps>,
         "className": undefined,
@@ -3298,9 +2587,6 @@ ReactWrapper {
               </Step>,
               <Step>
                 2
-              </Step>,
-              <Step>
-                3
               </Step>,
             ],
           },
@@ -3328,17 +2614,6 @@ ReactWrapper {
               "rendered": "2",
               "type": [Function],
             },
-            Object {
-              "instance": null,
-              "key": null,
-              "nodeType": "function",
-              "props": Object {
-                "children": "3",
-              },
-              "ref": null,
-              "rendered": "3",
-              "type": [Function],
-            },
           ],
           "type": [Function],
         },
@@ -3355,7 +2630,7 @@ ReactWrapper {
           "goToNextStep": [Function],
           "goToPrevStep": [Function],
           "goToStep": [Function],
-          "totalSteps": 3,
+          "totalSteps": 2,
         },
         "_reactInternalFiber": FiberNode {
           "_debugID": 4,
@@ -3387,7 +2662,7 @@ ReactWrapper {
                   "_debugSource": null,
                   "alternate": null,
                   "child": FiberNode {
-                    "_debugID": 10,
+                    "_debugID": 9,
                     "_debugIsCurrentlyTiming": false,
                     "_debugOwner": null,
                     "_debugSource": null,
@@ -3434,7 +2709,7 @@ ReactWrapper {
                     "_debugSource": null,
                     "alternate": null,
                     "child": FiberNode {
-                      "_debugID": 11,
+                      "_debugID": 10,
                       "_debugIsCurrentlyTiming": false,
                       "_debugOwner": null,
                       "_debugSource": null,
@@ -3474,59 +2749,7 @@ ReactWrapper {
                     "pendingWorkPriority": 0,
                     "ref": null,
                     "return": [Circular],
-                    "sibling": FiberNode {
-                      "_debugID": 9,
-                      "_debugIsCurrentlyTiming": false,
-                      "_debugOwner": null,
-                      "_debugSource": null,
-                      "alternate": null,
-                      "child": FiberNode {
-                        "_debugID": 12,
-                        "_debugIsCurrentlyTiming": false,
-                        "_debugOwner": null,
-                        "_debugSource": null,
-                        "alternate": null,
-                        "child": null,
-                        "effectTag": 0,
-                        "firstEffect": null,
-                        "index": 0,
-                        "internalContextTag": 0,
-                        "key": null,
-                        "lastEffect": null,
-                        "memoizedProps": "3",
-                        "memoizedState": null,
-                        "nextEffect": null,
-                        "pendingProps": null,
-                        "pendingWorkPriority": 0,
-                        "ref": null,
-                        "return": [Circular],
-                        "sibling": null,
-                        "stateNode": 3,
-                        "tag": 6,
-                        "type": null,
-                        "updateQueue": null,
-                      },
-                      "effectTag": 1,
-                      "firstEffect": null,
-                      "index": 2,
-                      "internalContextTag": 0,
-                      "key": null,
-                      "lastEffect": null,
-                      "memoizedProps": Object {
-                        "children": "3",
-                      },
-                      "memoizedState": null,
-                      "nextEffect": null,
-                      "pendingProps": null,
-                      "pendingWorkPriority": 0,
-                      "ref": null,
-                      "return": [Circular],
-                      "sibling": null,
-                      "stateNode": null,
-                      "tag": 1,
-                      "type": [Function],
-                      "updateQueue": null,
-                    },
+                    "sibling": null,
                     "stateNode": null,
                     "tag": 1,
                     "type": [Function],
@@ -3550,9 +2773,6 @@ ReactWrapper {
                     </Step>,
                     <Step>
                       2
-                    </Step>,
-                    <Step>
-                      3
                     </Step>,
                   ],
                 },
@@ -3582,9 +2802,6 @@ ReactWrapper {
                   <Step>
                     2
                   </Step>
-                  <Step>
-                    3
-                  </Step>
                 </Steps>,
                 "className": undefined,
               },
@@ -3598,7 +2815,6 @@ ReactWrapper {
               "stateNode": <div>
                 1
                 2
-                3
               </div>,
               "tag": 5,
               "type": "div",
@@ -3626,7 +2842,7 @@ ReactWrapper {
                   "_debugSource": null,
                   "alternate": null,
                   "child": FiberNode {
-                    "_debugID": 10,
+                    "_debugID": 9,
                     "_debugIsCurrentlyTiming": false,
                     "_debugOwner": null,
                     "_debugSource": null,
@@ -3673,7 +2889,7 @@ ReactWrapper {
                     "_debugSource": null,
                     "alternate": null,
                     "child": FiberNode {
-                      "_debugID": 11,
+                      "_debugID": 10,
                       "_debugIsCurrentlyTiming": false,
                       "_debugOwner": null,
                       "_debugSource": null,
@@ -3713,59 +2929,7 @@ ReactWrapper {
                     "pendingWorkPriority": 0,
                     "ref": null,
                     "return": [Circular],
-                    "sibling": FiberNode {
-                      "_debugID": 9,
-                      "_debugIsCurrentlyTiming": false,
-                      "_debugOwner": null,
-                      "_debugSource": null,
-                      "alternate": null,
-                      "child": FiberNode {
-                        "_debugID": 12,
-                        "_debugIsCurrentlyTiming": false,
-                        "_debugOwner": null,
-                        "_debugSource": null,
-                        "alternate": null,
-                        "child": null,
-                        "effectTag": 0,
-                        "firstEffect": null,
-                        "index": 0,
-                        "internalContextTag": 0,
-                        "key": null,
-                        "lastEffect": null,
-                        "memoizedProps": "3",
-                        "memoizedState": null,
-                        "nextEffect": null,
-                        "pendingProps": null,
-                        "pendingWorkPriority": 0,
-                        "ref": null,
-                        "return": [Circular],
-                        "sibling": null,
-                        "stateNode": 3,
-                        "tag": 6,
-                        "type": null,
-                        "updateQueue": null,
-                      },
-                      "effectTag": 1,
-                      "firstEffect": null,
-                      "index": 2,
-                      "internalContextTag": 0,
-                      "key": null,
-                      "lastEffect": null,
-                      "memoizedProps": Object {
-                        "children": "3",
-                      },
-                      "memoizedState": null,
-                      "nextEffect": null,
-                      "pendingProps": null,
-                      "pendingWorkPriority": 0,
-                      "ref": null,
-                      "return": [Circular],
-                      "sibling": null,
-                      "stateNode": null,
-                      "tag": 1,
-                      "type": [Function],
-                      "updateQueue": null,
-                    },
+                    "sibling": null,
                     "stateNode": null,
                     "tag": 1,
                     "type": [Function],
@@ -3789,9 +2953,6 @@ ReactWrapper {
                     </Step>,
                     <Step>
                       2
-                    </Step>,
-                    <Step>
-                      3
                     </Step>,
                   ],
                 },
@@ -3821,9 +2982,6 @@ ReactWrapper {
                   <Step>
                     2
                   </Step>
-                  <Step>
-                    3
-                  </Step>
                 </Steps>,
                 "className": undefined,
               },
@@ -3837,7 +2995,6 @@ ReactWrapper {
               "stateNode": <div>
                 1
                 2
-                3
               </div>,
               "tag": 5,
               "type": "div",
@@ -3854,9 +3011,6 @@ ReactWrapper {
                   <Step>
                     2
                   </Step>
-                  <Step>
-                    3
-                  </Step>
                 </Steps>,
                 "defaultActiveStepIndex": 0,
                 "onStepChanged": [Function],
@@ -3872,9 +3026,6 @@ ReactWrapper {
                   </Step>
                   <Step>
                     2
-                  </Step>
-                  <Step>
-                    3
                   </Step>
                 </Steps>,
                 "defaultActiveStepIndex": 0,
@@ -3916,7 +3067,6 @@ ReactWrapper {
                     <div>
                       1
                       2
-                      3
                     </div>
                   </div>,
                   "context": Object {},
@@ -3948,9 +3098,6 @@ ReactWrapper {
                               <Step>
                                 2
                               </Step>
-                              <Step>
-                                3
-                              </Step>
                             </Steps>,
                             "defaultActiveStepIndex": 0,
                             "onStepChanged": [Function],
@@ -3980,9 +3127,6 @@ ReactWrapper {
                               </Step>
                               <Step>
                                 2
-                              </Step>
-                              <Step>
-                                3
                               </Step>
                             </Steps>,
                             "defaultActiveStepIndex": 0,
@@ -4016,7 +3160,7 @@ ReactWrapper {
                     "_debugSource": null,
                     "alternate": null,
                     "child": FiberNode {
-                      "_debugID": 10,
+                      "_debugID": 9,
                       "_debugIsCurrentlyTiming": false,
                       "_debugOwner": null,
                       "_debugSource": null,
@@ -4063,7 +3207,7 @@ ReactWrapper {
                       "_debugSource": null,
                       "alternate": null,
                       "child": FiberNode {
-                        "_debugID": 11,
+                        "_debugID": 10,
                         "_debugIsCurrentlyTiming": false,
                         "_debugOwner": null,
                         "_debugSource": null,
@@ -4103,59 +3247,7 @@ ReactWrapper {
                       "pendingWorkPriority": 0,
                       "ref": null,
                       "return": [Circular],
-                      "sibling": FiberNode {
-                        "_debugID": 9,
-                        "_debugIsCurrentlyTiming": false,
-                        "_debugOwner": null,
-                        "_debugSource": null,
-                        "alternate": null,
-                        "child": FiberNode {
-                          "_debugID": 12,
-                          "_debugIsCurrentlyTiming": false,
-                          "_debugOwner": null,
-                          "_debugSource": null,
-                          "alternate": null,
-                          "child": null,
-                          "effectTag": 0,
-                          "firstEffect": null,
-                          "index": 0,
-                          "internalContextTag": 0,
-                          "key": null,
-                          "lastEffect": null,
-                          "memoizedProps": "3",
-                          "memoizedState": null,
-                          "nextEffect": null,
-                          "pendingProps": null,
-                          "pendingWorkPriority": 0,
-                          "ref": null,
-                          "return": [Circular],
-                          "sibling": null,
-                          "stateNode": 3,
-                          "tag": 6,
-                          "type": null,
-                          "updateQueue": null,
-                        },
-                        "effectTag": 1,
-                        "firstEffect": null,
-                        "index": 2,
-                        "internalContextTag": 0,
-                        "key": null,
-                        "lastEffect": null,
-                        "memoizedProps": Object {
-                          "children": "3",
-                        },
-                        "memoizedState": null,
-                        "nextEffect": null,
-                        "pendingProps": null,
-                        "pendingWorkPriority": 0,
-                        "ref": null,
-                        "return": [Circular],
-                        "sibling": null,
-                        "stateNode": null,
-                        "tag": 1,
-                        "type": [Function],
-                        "updateQueue": null,
-                      },
+                      "sibling": null,
                       "stateNode": null,
                       "tag": 1,
                       "type": [Function],
@@ -4179,9 +3271,6 @@ ReactWrapper {
                       </Step>,
                       <Step>
                         2
-                      </Step>,
-                      <Step>
-                        3
                       </Step>,
                     ],
                   },
@@ -4211,9 +3300,6 @@ ReactWrapper {
                     <Step>
                       2
                     </Step>
-                    <Step>
-                      3
-                    </Step>
                   </Steps>,
                   "className": undefined,
                 },
@@ -4227,7 +3313,6 @@ ReactWrapper {
                 "stateNode": <div>
                   1
                   2
-                  3
                 </div>,
                 "tag": 5,
                 "type": "div",
@@ -4255,7 +3340,7 @@ ReactWrapper {
                     "_debugSource": null,
                     "alternate": null,
                     "child": FiberNode {
-                      "_debugID": 10,
+                      "_debugID": 9,
                       "_debugIsCurrentlyTiming": false,
                       "_debugOwner": null,
                       "_debugSource": null,
@@ -4302,7 +3387,7 @@ ReactWrapper {
                       "_debugSource": null,
                       "alternate": null,
                       "child": FiberNode {
-                        "_debugID": 11,
+                        "_debugID": 10,
                         "_debugIsCurrentlyTiming": false,
                         "_debugOwner": null,
                         "_debugSource": null,
@@ -4342,59 +3427,7 @@ ReactWrapper {
                       "pendingWorkPriority": 0,
                       "ref": null,
                       "return": [Circular],
-                      "sibling": FiberNode {
-                        "_debugID": 9,
-                        "_debugIsCurrentlyTiming": false,
-                        "_debugOwner": null,
-                        "_debugSource": null,
-                        "alternate": null,
-                        "child": FiberNode {
-                          "_debugID": 12,
-                          "_debugIsCurrentlyTiming": false,
-                          "_debugOwner": null,
-                          "_debugSource": null,
-                          "alternate": null,
-                          "child": null,
-                          "effectTag": 0,
-                          "firstEffect": null,
-                          "index": 0,
-                          "internalContextTag": 0,
-                          "key": null,
-                          "lastEffect": null,
-                          "memoizedProps": "3",
-                          "memoizedState": null,
-                          "nextEffect": null,
-                          "pendingProps": null,
-                          "pendingWorkPriority": 0,
-                          "ref": null,
-                          "return": [Circular],
-                          "sibling": null,
-                          "stateNode": 3,
-                          "tag": 6,
-                          "type": null,
-                          "updateQueue": null,
-                        },
-                        "effectTag": 1,
-                        "firstEffect": null,
-                        "index": 2,
-                        "internalContextTag": 0,
-                        "key": null,
-                        "lastEffect": null,
-                        "memoizedProps": Object {
-                          "children": "3",
-                        },
-                        "memoizedState": null,
-                        "nextEffect": null,
-                        "pendingProps": null,
-                        "pendingWorkPriority": 0,
-                        "ref": null,
-                        "return": [Circular],
-                        "sibling": null,
-                        "stateNode": null,
-                        "tag": 1,
-                        "type": [Function],
-                        "updateQueue": null,
-                      },
+                      "sibling": null,
                       "stateNode": null,
                       "tag": 1,
                       "type": [Function],
@@ -4418,9 +3451,6 @@ ReactWrapper {
                       </Step>,
                       <Step>
                         2
-                      </Step>,
-                      <Step>
-                        3
                       </Step>,
                     ],
                   },
@@ -4450,9 +3480,6 @@ ReactWrapper {
                     <Step>
                       2
                     </Step>
-                    <Step>
-                      3
-                    </Step>
                   </Steps>,
                   "className": undefined,
                 },
@@ -4466,7 +3493,6 @@ ReactWrapper {
                 "stateNode": <div>
                   1
                   2
-                  3
                 </div>,
                 "tag": 5,
                 "type": "div",
@@ -4486,9 +3512,6 @@ ReactWrapper {
                         <Step>
                           2
                         </Step>
-                        <Step>
-                          3
-                        </Step>
                       </Steps>,
                       "defaultActiveStepIndex": 0,
                       "onStepChanged": [Function],
@@ -4507,7 +3530,6 @@ ReactWrapper {
                   <div>
                     1
                     2
-                    3
                   </div>
                 </div>,
                 "context": Object {},
@@ -4536,9 +3558,6 @@ ReactWrapper {
                     <Step>
                       2
                     </Step>
-                    <Step>
-                      3
-                    </Step>
                   </Steps>,
                   "defaultActiveStepIndex": 0,
                   "onStepChanged": [Function],
@@ -4555,9 +3574,6 @@ ReactWrapper {
                     </Step>
                     <Step>
                       2
-                    </Step>
-                    <Step>
-                      3
                     </Step>
                   </Steps>,
                   "defaultActiveStepIndex": 0,
@@ -4596,7 +3612,7 @@ ReactWrapper {
                 "_debugSource": null,
                 "alternate": null,
                 "child": FiberNode {
-                  "_debugID": 10,
+                  "_debugID": 9,
                   "_debugIsCurrentlyTiming": false,
                   "_debugOwner": null,
                   "_debugSource": null,
@@ -4643,7 +3659,7 @@ ReactWrapper {
                   "_debugSource": null,
                   "alternate": null,
                   "child": FiberNode {
-                    "_debugID": 11,
+                    "_debugID": 10,
                     "_debugIsCurrentlyTiming": false,
                     "_debugOwner": null,
                     "_debugSource": null,
@@ -4683,59 +3699,7 @@ ReactWrapper {
                   "pendingWorkPriority": 0,
                   "ref": null,
                   "return": [Circular],
-                  "sibling": FiberNode {
-                    "_debugID": 9,
-                    "_debugIsCurrentlyTiming": false,
-                    "_debugOwner": null,
-                    "_debugSource": null,
-                    "alternate": null,
-                    "child": FiberNode {
-                      "_debugID": 12,
-                      "_debugIsCurrentlyTiming": false,
-                      "_debugOwner": null,
-                      "_debugSource": null,
-                      "alternate": null,
-                      "child": null,
-                      "effectTag": 0,
-                      "firstEffect": null,
-                      "index": 0,
-                      "internalContextTag": 0,
-                      "key": null,
-                      "lastEffect": null,
-                      "memoizedProps": "3",
-                      "memoizedState": null,
-                      "nextEffect": null,
-                      "pendingProps": null,
-                      "pendingWorkPriority": 0,
-                      "ref": null,
-                      "return": [Circular],
-                      "sibling": null,
-                      "stateNode": 3,
-                      "tag": 6,
-                      "type": null,
-                      "updateQueue": null,
-                    },
-                    "effectTag": 1,
-                    "firstEffect": null,
-                    "index": 2,
-                    "internalContextTag": 0,
-                    "key": null,
-                    "lastEffect": null,
-                    "memoizedProps": Object {
-                      "children": "3",
-                    },
-                    "memoizedState": null,
-                    "nextEffect": null,
-                    "pendingProps": null,
-                    "pendingWorkPriority": 0,
-                    "ref": null,
-                    "return": [Circular],
-                    "sibling": null,
-                    "stateNode": null,
-                    "tag": 1,
-                    "type": [Function],
-                    "updateQueue": null,
-                  },
+                  "sibling": null,
                   "stateNode": null,
                   "tag": 1,
                   "type": [Function],
@@ -4759,9 +3723,6 @@ ReactWrapper {
                   </Step>,
                   <Step>
                     2
-                  </Step>,
-                  <Step>
-                    3
                   </Step>,
                 ],
               },
@@ -4791,9 +3752,6 @@ ReactWrapper {
                 <Step>
                   2
                 </Step>
-                <Step>
-                  3
-                </Step>
               </Steps>,
               "className": undefined,
             },
@@ -4807,7 +3765,6 @@ ReactWrapper {
             "stateNode": <div>
               1
               2
-              3
             </div>,
             "tag": 5,
             "type": "div",
@@ -4833,7 +3790,7 @@ ReactWrapper {
                 "_debugSource": null,
                 "alternate": null,
                 "child": FiberNode {
-                  "_debugID": 10,
+                  "_debugID": 9,
                   "_debugIsCurrentlyTiming": false,
                   "_debugOwner": null,
                   "_debugSource": null,
@@ -4880,7 +3837,7 @@ ReactWrapper {
                   "_debugSource": null,
                   "alternate": null,
                   "child": FiberNode {
-                    "_debugID": 11,
+                    "_debugID": 10,
                     "_debugIsCurrentlyTiming": false,
                     "_debugOwner": null,
                     "_debugSource": null,
@@ -4920,59 +3877,7 @@ ReactWrapper {
                   "pendingWorkPriority": 0,
                   "ref": null,
                   "return": [Circular],
-                  "sibling": FiberNode {
-                    "_debugID": 9,
-                    "_debugIsCurrentlyTiming": false,
-                    "_debugOwner": null,
-                    "_debugSource": null,
-                    "alternate": null,
-                    "child": FiberNode {
-                      "_debugID": 12,
-                      "_debugIsCurrentlyTiming": false,
-                      "_debugOwner": null,
-                      "_debugSource": null,
-                      "alternate": null,
-                      "child": null,
-                      "effectTag": 0,
-                      "firstEffect": null,
-                      "index": 0,
-                      "internalContextTag": 0,
-                      "key": null,
-                      "lastEffect": null,
-                      "memoizedProps": "3",
-                      "memoizedState": null,
-                      "nextEffect": null,
-                      "pendingProps": null,
-                      "pendingWorkPriority": 0,
-                      "ref": null,
-                      "return": [Circular],
-                      "sibling": null,
-                      "stateNode": 3,
-                      "tag": 6,
-                      "type": null,
-                      "updateQueue": null,
-                    },
-                    "effectTag": 1,
-                    "firstEffect": null,
-                    "index": 2,
-                    "internalContextTag": 0,
-                    "key": null,
-                    "lastEffect": null,
-                    "memoizedProps": Object {
-                      "children": "3",
-                    },
-                    "memoizedState": null,
-                    "nextEffect": null,
-                    "pendingProps": null,
-                    "pendingWorkPriority": 0,
-                    "ref": null,
-                    "return": [Circular],
-                    "sibling": null,
-                    "stateNode": null,
-                    "tag": 1,
-                    "type": [Function],
-                    "updateQueue": null,
-                  },
+                  "sibling": null,
                   "stateNode": null,
                   "tag": 1,
                   "type": [Function],
@@ -4996,9 +3901,6 @@ ReactWrapper {
                   </Step>,
                   <Step>
                     2
-                  </Step>,
-                  <Step>
-                    3
                   </Step>,
                 ],
               },
@@ -5028,9 +3930,6 @@ ReactWrapper {
                 <Step>
                   2
                 </Step>
-                <Step>
-                  3
-                </Step>
               </Steps>,
               "className": undefined,
             },
@@ -5044,7 +3943,6 @@ ReactWrapper {
             "stateNode": <div>
               1
               2
-              3
             </div>,
             "tag": 5,
             "type": "div",
@@ -5072,7 +3970,7 @@ ReactWrapper {
                 "_debugSource": null,
                 "alternate": null,
                 "child": FiberNode {
-                  "_debugID": 10,
+                  "_debugID": 9,
                   "_debugIsCurrentlyTiming": false,
                   "_debugOwner": null,
                   "_debugSource": null,
@@ -5119,7 +4017,7 @@ ReactWrapper {
                   "_debugSource": null,
                   "alternate": null,
                   "child": FiberNode {
-                    "_debugID": 11,
+                    "_debugID": 10,
                     "_debugIsCurrentlyTiming": false,
                     "_debugOwner": null,
                     "_debugSource": null,
@@ -5159,59 +4057,7 @@ ReactWrapper {
                   "pendingWorkPriority": 0,
                   "ref": null,
                   "return": [Circular],
-                  "sibling": FiberNode {
-                    "_debugID": 9,
-                    "_debugIsCurrentlyTiming": false,
-                    "_debugOwner": null,
-                    "_debugSource": null,
-                    "alternate": null,
-                    "child": FiberNode {
-                      "_debugID": 12,
-                      "_debugIsCurrentlyTiming": false,
-                      "_debugOwner": null,
-                      "_debugSource": null,
-                      "alternate": null,
-                      "child": null,
-                      "effectTag": 0,
-                      "firstEffect": null,
-                      "index": 0,
-                      "internalContextTag": 0,
-                      "key": null,
-                      "lastEffect": null,
-                      "memoizedProps": "3",
-                      "memoizedState": null,
-                      "nextEffect": null,
-                      "pendingProps": null,
-                      "pendingWorkPriority": 0,
-                      "ref": null,
-                      "return": [Circular],
-                      "sibling": null,
-                      "stateNode": 3,
-                      "tag": 6,
-                      "type": null,
-                      "updateQueue": null,
-                    },
-                    "effectTag": 1,
-                    "firstEffect": null,
-                    "index": 2,
-                    "internalContextTag": 0,
-                    "key": null,
-                    "lastEffect": null,
-                    "memoizedProps": Object {
-                      "children": "3",
-                    },
-                    "memoizedState": null,
-                    "nextEffect": null,
-                    "pendingProps": null,
-                    "pendingWorkPriority": 0,
-                    "ref": null,
-                    "return": [Circular],
-                    "sibling": null,
-                    "stateNode": null,
-                    "tag": 1,
-                    "type": [Function],
-                    "updateQueue": null,
-                  },
+                  "sibling": null,
                   "stateNode": null,
                   "tag": 1,
                   "type": [Function],
@@ -5235,9 +4081,6 @@ ReactWrapper {
                   </Step>,
                   <Step>
                     2
-                  </Step>,
-                  <Step>
-                    3
                   </Step>,
                 ],
               },
@@ -5267,9 +4110,6 @@ ReactWrapper {
                 <Step>
                   2
                 </Step>
-                <Step>
-                  3
-                </Step>
               </Steps>,
               "className": undefined,
             },
@@ -5283,7 +4123,6 @@ ReactWrapper {
             "stateNode": <div>
               1
               2
-              3
             </div>,
             "tag": 5,
             "type": "div",
@@ -5297,16 +4136,13 @@ ReactWrapper {
               <Step>
                 2
               </Step>
-              <Step>
-                3
-              </Step>
             </Steps>,
             "defaultActiveStepIndex": 0,
             "onStepChanged": [Function],
           },
           "memoizedState": Object {
             "activeStepIndex": 0,
-            "totalSteps": 3,
+            "totalSteps": 2,
           },
           "nextEffect": null,
           "pendingProps": null,
@@ -5339,7 +4175,7 @@ ReactWrapper {
                   "_debugSource": null,
                   "alternate": null,
                   "child": FiberNode {
-                    "_debugID": 10,
+                    "_debugID": 9,
                     "_debugIsCurrentlyTiming": false,
                     "_debugOwner": null,
                     "_debugSource": null,
@@ -5386,7 +4222,7 @@ ReactWrapper {
                     "_debugSource": null,
                     "alternate": null,
                     "child": FiberNode {
-                      "_debugID": 11,
+                      "_debugID": 10,
                       "_debugIsCurrentlyTiming": false,
                       "_debugOwner": null,
                       "_debugSource": null,
@@ -5426,59 +4262,7 @@ ReactWrapper {
                     "pendingWorkPriority": 0,
                     "ref": null,
                     "return": [Circular],
-                    "sibling": FiberNode {
-                      "_debugID": 9,
-                      "_debugIsCurrentlyTiming": false,
-                      "_debugOwner": null,
-                      "_debugSource": null,
-                      "alternate": null,
-                      "child": FiberNode {
-                        "_debugID": 12,
-                        "_debugIsCurrentlyTiming": false,
-                        "_debugOwner": null,
-                        "_debugSource": null,
-                        "alternate": null,
-                        "child": null,
-                        "effectTag": 0,
-                        "firstEffect": null,
-                        "index": 0,
-                        "internalContextTag": 0,
-                        "key": null,
-                        "lastEffect": null,
-                        "memoizedProps": "3",
-                        "memoizedState": null,
-                        "nextEffect": null,
-                        "pendingProps": null,
-                        "pendingWorkPriority": 0,
-                        "ref": null,
-                        "return": [Circular],
-                        "sibling": null,
-                        "stateNode": 3,
-                        "tag": 6,
-                        "type": null,
-                        "updateQueue": null,
-                      },
-                      "effectTag": 1,
-                      "firstEffect": null,
-                      "index": 2,
-                      "internalContextTag": 0,
-                      "key": null,
-                      "lastEffect": null,
-                      "memoizedProps": Object {
-                        "children": "3",
-                      },
-                      "memoizedState": null,
-                      "nextEffect": null,
-                      "pendingProps": null,
-                      "pendingWorkPriority": 0,
-                      "ref": null,
-                      "return": [Circular],
-                      "sibling": null,
-                      "stateNode": null,
-                      "tag": 1,
-                      "type": [Function],
-                      "updateQueue": null,
-                    },
+                    "sibling": null,
                     "stateNode": null,
                     "tag": 1,
                     "type": [Function],
@@ -5502,9 +4286,6 @@ ReactWrapper {
                     </Step>,
                     <Step>
                       2
-                    </Step>,
-                    <Step>
-                      3
                     </Step>,
                   ],
                 },
@@ -5534,9 +4315,6 @@ ReactWrapper {
                   <Step>
                     2
                   </Step>
-                  <Step>
-                    3
-                  </Step>
                 </Steps>,
                 "className": undefined,
               },
@@ -5550,7 +4328,6 @@ ReactWrapper {
               "stateNode": <div>
                 1
                 2
-                3
               </div>,
               "tag": 5,
               "type": "div",
@@ -5578,7 +4355,7 @@ ReactWrapper {
                   "_debugSource": null,
                   "alternate": null,
                   "child": FiberNode {
-                    "_debugID": 10,
+                    "_debugID": 9,
                     "_debugIsCurrentlyTiming": false,
                     "_debugOwner": null,
                     "_debugSource": null,
@@ -5625,7 +4402,7 @@ ReactWrapper {
                     "_debugSource": null,
                     "alternate": null,
                     "child": FiberNode {
-                      "_debugID": 11,
+                      "_debugID": 10,
                       "_debugIsCurrentlyTiming": false,
                       "_debugOwner": null,
                       "_debugSource": null,
@@ -5665,59 +4442,7 @@ ReactWrapper {
                     "pendingWorkPriority": 0,
                     "ref": null,
                     "return": [Circular],
-                    "sibling": FiberNode {
-                      "_debugID": 9,
-                      "_debugIsCurrentlyTiming": false,
-                      "_debugOwner": null,
-                      "_debugSource": null,
-                      "alternate": null,
-                      "child": FiberNode {
-                        "_debugID": 12,
-                        "_debugIsCurrentlyTiming": false,
-                        "_debugOwner": null,
-                        "_debugSource": null,
-                        "alternate": null,
-                        "child": null,
-                        "effectTag": 0,
-                        "firstEffect": null,
-                        "index": 0,
-                        "internalContextTag": 0,
-                        "key": null,
-                        "lastEffect": null,
-                        "memoizedProps": "3",
-                        "memoizedState": null,
-                        "nextEffect": null,
-                        "pendingProps": null,
-                        "pendingWorkPriority": 0,
-                        "ref": null,
-                        "return": [Circular],
-                        "sibling": null,
-                        "stateNode": 3,
-                        "tag": 6,
-                        "type": null,
-                        "updateQueue": null,
-                      },
-                      "effectTag": 1,
-                      "firstEffect": null,
-                      "index": 2,
-                      "internalContextTag": 0,
-                      "key": null,
-                      "lastEffect": null,
-                      "memoizedProps": Object {
-                        "children": "3",
-                      },
-                      "memoizedState": null,
-                      "nextEffect": null,
-                      "pendingProps": null,
-                      "pendingWorkPriority": 0,
-                      "ref": null,
-                      "return": [Circular],
-                      "sibling": null,
-                      "stateNode": null,
-                      "tag": 1,
-                      "type": [Function],
-                      "updateQueue": null,
-                    },
+                    "sibling": null,
                     "stateNode": null,
                     "tag": 1,
                     "type": [Function],
@@ -5741,9 +4466,6 @@ ReactWrapper {
                     </Step>,
                     <Step>
                       2
-                    </Step>,
-                    <Step>
-                      3
                     </Step>,
                   ],
                 },
@@ -5773,9 +4495,6 @@ ReactWrapper {
                   <Step>
                     2
                   </Step>
-                  <Step>
-                    3
-                  </Step>
                 </Steps>,
                 "className": undefined,
               },
@@ -5789,7 +4508,6 @@ ReactWrapper {
               "stateNode": <div>
                 1
                 2
-                3
               </div>,
               "tag": 5,
               "type": "div",
@@ -5806,9 +4524,6 @@ ReactWrapper {
                   <Step>
                     2
                   </Step>
-                  <Step>
-                    3
-                  </Step>
                 </Steps>,
                 "defaultActiveStepIndex": 0,
                 "onStepChanged": [Function],
@@ -5824,9 +4539,6 @@ ReactWrapper {
                   </Step>
                   <Step>
                     2
-                  </Step>
-                  <Step>
-                    3
                   </Step>
                 </Steps>,
                 "defaultActiveStepIndex": 0,
@@ -5868,7 +4580,6 @@ ReactWrapper {
                     <div>
                       1
                       2
-                      3
                     </div>
                   </div>,
                   "context": Object {},
@@ -5900,9 +4611,6 @@ ReactWrapper {
                               <Step>
                                 2
                               </Step>
-                              <Step>
-                                3
-                              </Step>
                             </Steps>,
                             "defaultActiveStepIndex": 0,
                             "onStepChanged": [Function],
@@ -5932,9 +4640,6 @@ ReactWrapper {
                               </Step>
                               <Step>
                                 2
-                              </Step>
-                              <Step>
-                                3
                               </Step>
                             </Steps>,
                             "defaultActiveStepIndex": 0,
@@ -5968,7 +4673,7 @@ ReactWrapper {
                     "_debugSource": null,
                     "alternate": null,
                     "child": FiberNode {
-                      "_debugID": 10,
+                      "_debugID": 9,
                       "_debugIsCurrentlyTiming": false,
                       "_debugOwner": null,
                       "_debugSource": null,
@@ -6015,7 +4720,7 @@ ReactWrapper {
                       "_debugSource": null,
                       "alternate": null,
                       "child": FiberNode {
-                        "_debugID": 11,
+                        "_debugID": 10,
                         "_debugIsCurrentlyTiming": false,
                         "_debugOwner": null,
                         "_debugSource": null,
@@ -6055,59 +4760,7 @@ ReactWrapper {
                       "pendingWorkPriority": 0,
                       "ref": null,
                       "return": [Circular],
-                      "sibling": FiberNode {
-                        "_debugID": 9,
-                        "_debugIsCurrentlyTiming": false,
-                        "_debugOwner": null,
-                        "_debugSource": null,
-                        "alternate": null,
-                        "child": FiberNode {
-                          "_debugID": 12,
-                          "_debugIsCurrentlyTiming": false,
-                          "_debugOwner": null,
-                          "_debugSource": null,
-                          "alternate": null,
-                          "child": null,
-                          "effectTag": 0,
-                          "firstEffect": null,
-                          "index": 0,
-                          "internalContextTag": 0,
-                          "key": null,
-                          "lastEffect": null,
-                          "memoizedProps": "3",
-                          "memoizedState": null,
-                          "nextEffect": null,
-                          "pendingProps": null,
-                          "pendingWorkPriority": 0,
-                          "ref": null,
-                          "return": [Circular],
-                          "sibling": null,
-                          "stateNode": 3,
-                          "tag": 6,
-                          "type": null,
-                          "updateQueue": null,
-                        },
-                        "effectTag": 1,
-                        "firstEffect": null,
-                        "index": 2,
-                        "internalContextTag": 0,
-                        "key": null,
-                        "lastEffect": null,
-                        "memoizedProps": Object {
-                          "children": "3",
-                        },
-                        "memoizedState": null,
-                        "nextEffect": null,
-                        "pendingProps": null,
-                        "pendingWorkPriority": 0,
-                        "ref": null,
-                        "return": [Circular],
-                        "sibling": null,
-                        "stateNode": null,
-                        "tag": 1,
-                        "type": [Function],
-                        "updateQueue": null,
-                      },
+                      "sibling": null,
                       "stateNode": null,
                       "tag": 1,
                       "type": [Function],
@@ -6131,9 +4784,6 @@ ReactWrapper {
                       </Step>,
                       <Step>
                         2
-                      </Step>,
-                      <Step>
-                        3
                       </Step>,
                     ],
                   },
@@ -6163,9 +4813,6 @@ ReactWrapper {
                     <Step>
                       2
                     </Step>
-                    <Step>
-                      3
-                    </Step>
                   </Steps>,
                   "className": undefined,
                 },
@@ -6179,7 +4826,6 @@ ReactWrapper {
                 "stateNode": <div>
                   1
                   2
-                  3
                 </div>,
                 "tag": 5,
                 "type": "div",
@@ -6207,7 +4853,7 @@ ReactWrapper {
                     "_debugSource": null,
                     "alternate": null,
                     "child": FiberNode {
-                      "_debugID": 10,
+                      "_debugID": 9,
                       "_debugIsCurrentlyTiming": false,
                       "_debugOwner": null,
                       "_debugSource": null,
@@ -6254,7 +4900,7 @@ ReactWrapper {
                       "_debugSource": null,
                       "alternate": null,
                       "child": FiberNode {
-                        "_debugID": 11,
+                        "_debugID": 10,
                         "_debugIsCurrentlyTiming": false,
                         "_debugOwner": null,
                         "_debugSource": null,
@@ -6294,59 +4940,7 @@ ReactWrapper {
                       "pendingWorkPriority": 0,
                       "ref": null,
                       "return": [Circular],
-                      "sibling": FiberNode {
-                        "_debugID": 9,
-                        "_debugIsCurrentlyTiming": false,
-                        "_debugOwner": null,
-                        "_debugSource": null,
-                        "alternate": null,
-                        "child": FiberNode {
-                          "_debugID": 12,
-                          "_debugIsCurrentlyTiming": false,
-                          "_debugOwner": null,
-                          "_debugSource": null,
-                          "alternate": null,
-                          "child": null,
-                          "effectTag": 0,
-                          "firstEffect": null,
-                          "index": 0,
-                          "internalContextTag": 0,
-                          "key": null,
-                          "lastEffect": null,
-                          "memoizedProps": "3",
-                          "memoizedState": null,
-                          "nextEffect": null,
-                          "pendingProps": null,
-                          "pendingWorkPriority": 0,
-                          "ref": null,
-                          "return": [Circular],
-                          "sibling": null,
-                          "stateNode": 3,
-                          "tag": 6,
-                          "type": null,
-                          "updateQueue": null,
-                        },
-                        "effectTag": 1,
-                        "firstEffect": null,
-                        "index": 2,
-                        "internalContextTag": 0,
-                        "key": null,
-                        "lastEffect": null,
-                        "memoizedProps": Object {
-                          "children": "3",
-                        },
-                        "memoizedState": null,
-                        "nextEffect": null,
-                        "pendingProps": null,
-                        "pendingWorkPriority": 0,
-                        "ref": null,
-                        "return": [Circular],
-                        "sibling": null,
-                        "stateNode": null,
-                        "tag": 1,
-                        "type": [Function],
-                        "updateQueue": null,
-                      },
+                      "sibling": null,
                       "stateNode": null,
                       "tag": 1,
                       "type": [Function],
@@ -6370,9 +4964,6 @@ ReactWrapper {
                       </Step>,
                       <Step>
                         2
-                      </Step>,
-                      <Step>
-                        3
                       </Step>,
                     ],
                   },
@@ -6402,9 +4993,6 @@ ReactWrapper {
                     <Step>
                       2
                     </Step>
-                    <Step>
-                      3
-                    </Step>
                   </Steps>,
                   "className": undefined,
                 },
@@ -6418,7 +5006,6 @@ ReactWrapper {
                 "stateNode": <div>
                   1
                   2
-                  3
                 </div>,
                 "tag": 5,
                 "type": "div",
@@ -6438,9 +5025,6 @@ ReactWrapper {
                         <Step>
                           2
                         </Step>
-                        <Step>
-                          3
-                        </Step>
                       </Steps>,
                       "defaultActiveStepIndex": 0,
                       "onStepChanged": [Function],
@@ -6459,7 +5043,6 @@ ReactWrapper {
                   <div>
                     1
                     2
-                    3
                   </div>
                 </div>,
                 "context": Object {},
@@ -6488,9 +5071,6 @@ ReactWrapper {
                     <Step>
                       2
                     </Step>
-                    <Step>
-                      3
-                    </Step>
                   </Steps>,
                   "defaultActiveStepIndex": 0,
                   "onStepChanged": [Function],
@@ -6507,9 +5087,6 @@ ReactWrapper {
                     </Step>
                     <Step>
                       2
-                    </Step>
-                    <Step>
-                      3
                     </Step>
                   </Steps>,
                   "defaultActiveStepIndex": 0,
@@ -6547,9 +5124,6 @@ ReactWrapper {
             <Step>
               2
             </Step>
-            <Step>
-              3
-            </Step>
           </Steps>,
           "defaultActiveStepIndex": 0,
           "onStepChanged": [Function],
@@ -6557,7 +5131,7 @@ ReactWrapper {
         "refs": Object {},
         "state": Object {
           "activeStepIndex": 0,
-          "totalSteps": 3,
+          "totalSteps": 2,
         },
         "updater": Object {
           "enqueueForceUpdate": [Function],
@@ -6576,9 +5150,6 @@ ReactWrapper {
           <Step>
             2
           </Step>
-          <Step>
-            3
-          </Step>
         </Steps>,
         "defaultActiveStepIndex": 0,
         "onStepChanged": [Function],
@@ -6588,7 +5159,6 @@ ReactWrapper {
         "instance": <div>
           1
           2
-          3
         </div>,
         "key": null,
         "nodeType": "host",
@@ -6599,9 +5169,6 @@ ReactWrapper {
             </Step>
             <Step>
               2
-            </Step>
-            <Step>
-              3
             </Step>
           </Steps>,
           "className": undefined,
@@ -6619,9 +5186,6 @@ ReactWrapper {
                 </Step>,
                 <Step>
                   2
-                </Step>,
-                <Step>
-                  3
                 </Step>,
               ],
             },
@@ -6647,17 +5211,6 @@ ReactWrapper {
                 },
                 "ref": null,
                 "rendered": "2",
-                "type": [Function],
-              },
-              Object {
-                "instance": null,
-                "key": null,
-                "nodeType": "function",
-                "props": Object {
-                  "children": "3",
-                },
-                "ref": null,
-                "rendered": "3",
                 "type": [Function],
               },
             ],
