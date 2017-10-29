@@ -4,6 +4,8 @@ React library for building declarative wizards
 
 ## Example
 
+### Uncontrolled component
+
 ```
 const WizardPage = () => (
   <div className="WizardPage">
@@ -35,6 +37,29 @@ const WizardPage = () => (
     </Wizard>
   </div>
 );
+```
+
+### Controlled component
+
+```
+class App extends Component {
+  state = { 
+	activeStepIndex: 0
+  }
+	  
+  render() {
+	return(
+	  <Wizard activeStepIndex={this.state.activeStepIndex}>
+	    <Steps>
+	      <Step>
+	        <button onClick={() => this.setState({ activeStepIndex: 1 })>Go next step</button>
+	      </Step>
+	      <Step />
+	    </Steps>
+	  </Wizard>;
+	)   
+  }
+}
 ```
 
 ## Built With
