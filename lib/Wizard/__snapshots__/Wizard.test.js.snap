@@ -113,10 +113,8 @@ ReactWrapper {
               "sibling": null,
               "stateNode": Object {
                 "containerInfo": <div>
-                  <div>
-                    1
-                    2
-                  </div>
+                  1
+                  2
                 </div>,
                 "context": Object {},
                 "current": [Circular],
@@ -231,10 +229,8 @@ ReactWrapper {
             "sibling": null,
             "stateNode": Object {
               "containerInfo": <div>
-                <div>
-                  1
-                  2
-                </div>
+                1
+                2
               </div>,
               "context": Object {},
               "current": [Circular],
@@ -304,7 +300,7 @@ ReactWrapper {
         "child": FiberNode {
           "_debugID": 5,
           "_debugIsCurrentlyTiming": false,
-          "_debugOwner": [Circular],
+          "_debugOwner": null,
           "_debugSource": null,
           "alternate": null,
           "child": FiberNode {
@@ -314,6 +310,47 @@ ReactWrapper {
             "_debugSource": null,
             "alternate": null,
             "child": FiberNode {
+              "_debugID": 8,
+              "_debugIsCurrentlyTiming": false,
+              "_debugOwner": null,
+              "_debugSource": null,
+              "alternate": null,
+              "child": null,
+              "effectTag": 0,
+              "expirationTime": 0,
+              "firstEffect": null,
+              "index": 0,
+              "internalContextTag": 0,
+              "key": null,
+              "lastEffect": null,
+              "memoizedProps": "1",
+              "memoizedState": null,
+              "nextEffect": null,
+              "pendingProps": null,
+              "ref": null,
+              "return": [Circular],
+              "sibling": null,
+              "stateNode": 1,
+              "tag": 6,
+              "type": null,
+              "updateQueue": null,
+            },
+            "effectTag": 1,
+            "expirationTime": 0,
+            "firstEffect": null,
+            "index": 0,
+            "internalContextTag": 0,
+            "key": null,
+            "lastEffect": null,
+            "memoizedProps": Object {
+              "children": [Function],
+            },
+            "memoizedState": null,
+            "nextEffect": null,
+            "pendingProps": null,
+            "ref": null,
+            "return": [Circular],
+            "sibling": FiberNode {
               "_debugID": 7,
               "_debugIsCurrentlyTiming": false,
               "_debugOwner": null,
@@ -333,14 +370,14 @@ ReactWrapper {
                 "internalContextTag": 0,
                 "key": null,
                 "lastEffect": null,
-                "memoizedProps": "1",
+                "memoizedProps": "2",
                 "memoizedState": null,
                 "nextEffect": null,
                 "pendingProps": null,
                 "ref": null,
                 "return": [Circular],
                 "sibling": null,
-                "stateNode": 1,
+                "stateNode": 2,
                 "tag": 6,
                 "type": null,
                 "updateQueue": null,
@@ -348,105 +385,30 @@ ReactWrapper {
               "effectTag": 1,
               "expirationTime": 0,
               "firstEffect": null,
-              "index": 0,
+              "index": 1,
               "internalContextTag": 0,
               "key": null,
               "lastEffect": null,
               "memoizedProps": Object {
-                "children": [Function],
+                "children": "2",
               },
               "memoizedState": null,
               "nextEffect": null,
               "pendingProps": null,
               "ref": null,
               "return": [Circular],
-              "sibling": FiberNode {
-                "_debugID": 8,
-                "_debugIsCurrentlyTiming": false,
-                "_debugOwner": null,
-                "_debugSource": null,
-                "alternate": null,
-                "child": FiberNode {
-                  "_debugID": 10,
-                  "_debugIsCurrentlyTiming": false,
-                  "_debugOwner": null,
-                  "_debugSource": null,
-                  "alternate": null,
-                  "child": null,
-                  "effectTag": 0,
-                  "expirationTime": 0,
-                  "firstEffect": null,
-                  "index": 0,
-                  "internalContextTag": 0,
-                  "key": null,
-                  "lastEffect": null,
-                  "memoizedProps": "2",
-                  "memoizedState": null,
-                  "nextEffect": null,
-                  "pendingProps": null,
-                  "ref": null,
-                  "return": [Circular],
-                  "sibling": null,
-                  "stateNode": 2,
-                  "tag": 6,
-                  "type": null,
-                  "updateQueue": null,
-                },
-                "effectTag": 1,
-                "expirationTime": 0,
-                "firstEffect": null,
-                "index": 1,
-                "internalContextTag": 0,
-                "key": null,
-                "lastEffect": null,
-                "memoizedProps": Object {
-                  "children": "2",
-                },
-                "memoizedState": null,
-                "nextEffect": null,
-                "pendingProps": null,
-                "ref": null,
-                "return": [Circular],
-                "sibling": null,
-                "stateNode": null,
-                "tag": 1,
-                "type": [Function],
-                "updateQueue": null,
-              },
+              "sibling": null,
               "stateNode": null,
               "tag": 1,
               "type": [Function],
               "updateQueue": null,
             },
-            "effectTag": 1,
-            "expirationTime": 0,
-            "firstEffect": null,
-            "index": 0,
-            "internalContextTag": 0,
-            "key": null,
-            "lastEffect": null,
-            "memoizedProps": Object {
-              "children": Array [
-                <Step>
-                  [Function]
-                </Step>,
-                <Step>
-                  2
-                </Step>,
-              ],
-            },
-            "memoizedState": null,
-            "nextEffect": null,
-            "pendingProps": null,
-            "ref": null,
-            "return": [Circular],
-            "sibling": null,
             "stateNode": null,
             "tag": 1,
             "type": [Function],
             "updateQueue": null,
           },
-          "effectTag": 0,
+          "effectTag": 1,
           "expirationTime": 0,
           "firstEffect": null,
           "index": 0,
@@ -454,15 +416,14 @@ ReactWrapper {
           "key": null,
           "lastEffect": null,
           "memoizedProps": Object {
-            "children": <Steps>
+            "children": Array [
               <Step>
                 [Function]
-              </Step>
+              </Step>,
               <Step>
                 2
-              </Step>
-            </Steps>,
-            "className": undefined,
+              </Step>,
+            ],
           },
           "memoizedState": null,
           "nextEffect": null,
@@ -470,12 +431,9 @@ ReactWrapper {
           "ref": null,
           "return": [Circular],
           "sibling": null,
-          "stateNode": <div>
-            1
-            2
-          </div>,
-          "tag": 5,
-          "type": "div",
+          "stateNode": null,
+          "tag": 1,
+          "type": [Function],
           "updateQueue": null,
         },
         "effectTag": 1,
@@ -581,10 +539,8 @@ ReactWrapper {
               "sibling": null,
               "stateNode": Object {
                 "containerInfo": <div>
-                  <div>
-                    1
-                    2
-                  </div>
+                  1
+                  2
                 </div>,
                 "context": Object {},
                 "current": [Circular],
@@ -699,10 +655,8 @@ ReactWrapper {
             "sibling": null,
             "stateNode": Object {
               "containerInfo": <div>
-                <div>
-                  1
-                  2
-                </div>
+                1
+                2
               </div>,
               "context": Object {},
               "current": [Circular],
@@ -819,22 +773,18 @@ ReactWrapper {
     },
     "ref": null,
     "rendered": Object {
-      "instance": <div>
-        1
-        2
-      </div>,
+      "instance": null,
       "key": undefined,
-      "nodeType": "host",
+      "nodeType": "function",
       "props": Object {
-        "children": <Steps>
+        "children": Array [
           <Step>
             [Function]
-          </Step>
+          </Step>,
           <Step>
             2
-          </Step>
-        </Steps>,
-        "className": undefined,
+          </Step>,
+        ],
       },
       "ref": null,
       "rendered": Array [
@@ -843,44 +793,25 @@ ReactWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
-            "children": Array [
-              <Step>
-                [Function]
-              </Step>,
-              <Step>
-                2
-              </Step>,
-            ],
+            "children": [Function],
           },
           "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "function",
-              "props": Object {
-                "children": [Function],
-              },
-              "ref": null,
-              "rendered": "1",
-              "type": [Function],
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "function",
-              "props": Object {
-                "children": "2",
-              },
-              "ref": null,
-              "rendered": "2",
-              "type": [Function],
-            },
-          ],
+          "rendered": "1",
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": "2",
+          },
+          "ref": null,
+          "rendered": "2",
           "type": [Function],
         },
       ],
-      "type": "div",
+      "type": [Function],
     },
     "type": [Function],
   },
@@ -974,10 +905,8 @@ ReactWrapper {
                 "sibling": null,
                 "stateNode": Object {
                   "containerInfo": <div>
-                    <div>
-                      1
-                      2
-                    </div>
+                    1
+                    2
                   </div>,
                   "context": Object {},
                   "current": [Circular],
@@ -1092,10 +1021,8 @@ ReactWrapper {
               "sibling": null,
               "stateNode": Object {
                 "containerInfo": <div>
-                  <div>
-                    1
-                    2
-                  </div>
+                  1
+                  2
                 </div>,
                 "context": Object {},
                 "current": [Circular],
@@ -1165,7 +1092,7 @@ ReactWrapper {
           "child": FiberNode {
             "_debugID": 5,
             "_debugIsCurrentlyTiming": false,
-            "_debugOwner": [Circular],
+            "_debugOwner": null,
             "_debugSource": null,
             "alternate": null,
             "child": FiberNode {
@@ -1175,6 +1102,47 @@ ReactWrapper {
               "_debugSource": null,
               "alternate": null,
               "child": FiberNode {
+                "_debugID": 8,
+                "_debugIsCurrentlyTiming": false,
+                "_debugOwner": null,
+                "_debugSource": null,
+                "alternate": null,
+                "child": null,
+                "effectTag": 0,
+                "expirationTime": 0,
+                "firstEffect": null,
+                "index": 0,
+                "internalContextTag": 0,
+                "key": null,
+                "lastEffect": null,
+                "memoizedProps": "1",
+                "memoizedState": null,
+                "nextEffect": null,
+                "pendingProps": null,
+                "ref": null,
+                "return": [Circular],
+                "sibling": null,
+                "stateNode": 1,
+                "tag": 6,
+                "type": null,
+                "updateQueue": null,
+              },
+              "effectTag": 1,
+              "expirationTime": 0,
+              "firstEffect": null,
+              "index": 0,
+              "internalContextTag": 0,
+              "key": null,
+              "lastEffect": null,
+              "memoizedProps": Object {
+                "children": [Function],
+              },
+              "memoizedState": null,
+              "nextEffect": null,
+              "pendingProps": null,
+              "ref": null,
+              "return": [Circular],
+              "sibling": FiberNode {
                 "_debugID": 7,
                 "_debugIsCurrentlyTiming": false,
                 "_debugOwner": null,
@@ -1194,14 +1162,14 @@ ReactWrapper {
                   "internalContextTag": 0,
                   "key": null,
                   "lastEffect": null,
-                  "memoizedProps": "1",
+                  "memoizedProps": "2",
                   "memoizedState": null,
                   "nextEffect": null,
                   "pendingProps": null,
                   "ref": null,
                   "return": [Circular],
                   "sibling": null,
-                  "stateNode": 1,
+                  "stateNode": 2,
                   "tag": 6,
                   "type": null,
                   "updateQueue": null,
@@ -1209,105 +1177,30 @@ ReactWrapper {
                 "effectTag": 1,
                 "expirationTime": 0,
                 "firstEffect": null,
-                "index": 0,
+                "index": 1,
                 "internalContextTag": 0,
                 "key": null,
                 "lastEffect": null,
                 "memoizedProps": Object {
-                  "children": [Function],
+                  "children": "2",
                 },
                 "memoizedState": null,
                 "nextEffect": null,
                 "pendingProps": null,
                 "ref": null,
                 "return": [Circular],
-                "sibling": FiberNode {
-                  "_debugID": 8,
-                  "_debugIsCurrentlyTiming": false,
-                  "_debugOwner": null,
-                  "_debugSource": null,
-                  "alternate": null,
-                  "child": FiberNode {
-                    "_debugID": 10,
-                    "_debugIsCurrentlyTiming": false,
-                    "_debugOwner": null,
-                    "_debugSource": null,
-                    "alternate": null,
-                    "child": null,
-                    "effectTag": 0,
-                    "expirationTime": 0,
-                    "firstEffect": null,
-                    "index": 0,
-                    "internalContextTag": 0,
-                    "key": null,
-                    "lastEffect": null,
-                    "memoizedProps": "2",
-                    "memoizedState": null,
-                    "nextEffect": null,
-                    "pendingProps": null,
-                    "ref": null,
-                    "return": [Circular],
-                    "sibling": null,
-                    "stateNode": 2,
-                    "tag": 6,
-                    "type": null,
-                    "updateQueue": null,
-                  },
-                  "effectTag": 1,
-                  "expirationTime": 0,
-                  "firstEffect": null,
-                  "index": 1,
-                  "internalContextTag": 0,
-                  "key": null,
-                  "lastEffect": null,
-                  "memoizedProps": Object {
-                    "children": "2",
-                  },
-                  "memoizedState": null,
-                  "nextEffect": null,
-                  "pendingProps": null,
-                  "ref": null,
-                  "return": [Circular],
-                  "sibling": null,
-                  "stateNode": null,
-                  "tag": 1,
-                  "type": [Function],
-                  "updateQueue": null,
-                },
+                "sibling": null,
                 "stateNode": null,
                 "tag": 1,
                 "type": [Function],
                 "updateQueue": null,
               },
-              "effectTag": 1,
-              "expirationTime": 0,
-              "firstEffect": null,
-              "index": 0,
-              "internalContextTag": 0,
-              "key": null,
-              "lastEffect": null,
-              "memoizedProps": Object {
-                "children": Array [
-                  <Step>
-                    [Function]
-                  </Step>,
-                  <Step>
-                    2
-                  </Step>,
-                ],
-              },
-              "memoizedState": null,
-              "nextEffect": null,
-              "pendingProps": null,
-              "ref": null,
-              "return": [Circular],
-              "sibling": null,
               "stateNode": null,
               "tag": 1,
               "type": [Function],
               "updateQueue": null,
             },
-            "effectTag": 0,
+            "effectTag": 1,
             "expirationTime": 0,
             "firstEffect": null,
             "index": 0,
@@ -1315,15 +1208,14 @@ ReactWrapper {
             "key": null,
             "lastEffect": null,
             "memoizedProps": Object {
-              "children": <Steps>
+              "children": Array [
                 <Step>
                   [Function]
-                </Step>
+                </Step>,
                 <Step>
                   2
-                </Step>
-              </Steps>,
-              "className": undefined,
+                </Step>,
+              ],
             },
             "memoizedState": null,
             "nextEffect": null,
@@ -1331,12 +1223,9 @@ ReactWrapper {
             "ref": null,
             "return": [Circular],
             "sibling": null,
-            "stateNode": <div>
-              1
-              2
-            </div>,
-            "tag": 5,
-            "type": "div",
+            "stateNode": null,
+            "tag": 1,
+            "type": [Function],
             "updateQueue": null,
           },
           "effectTag": 1,
@@ -1442,10 +1331,8 @@ ReactWrapper {
                 "sibling": null,
                 "stateNode": Object {
                   "containerInfo": <div>
-                    <div>
-                      1
-                      2
-                    </div>
+                    1
+                    2
                   </div>,
                   "context": Object {},
                   "current": [Circular],
@@ -1560,10 +1447,8 @@ ReactWrapper {
               "sibling": null,
               "stateNode": Object {
                 "containerInfo": <div>
-                  <div>
-                    1
-                    2
-                  </div>
+                  1
+                  2
                 </div>,
                 "context": Object {},
                 "current": [Circular],
@@ -1680,22 +1565,18 @@ ReactWrapper {
       },
       "ref": null,
       "rendered": Object {
-        "instance": <div>
-          1
-          2
-        </div>,
+        "instance": null,
         "key": undefined,
-        "nodeType": "host",
+        "nodeType": "function",
         "props": Object {
-          "children": <Steps>
+          "children": Array [
             <Step>
               [Function]
-            </Step>
+            </Step>,
             <Step>
               2
-            </Step>
-          </Steps>,
-          "className": undefined,
+            </Step>,
+          ],
         },
         "ref": null,
         "rendered": Array [
@@ -1704,44 +1585,25 @@ ReactWrapper {
             "key": undefined,
             "nodeType": "function",
             "props": Object {
-              "children": Array [
-                <Step>
-                  [Function]
-                </Step>,
-                <Step>
-                  2
-                </Step>,
-              ],
+              "children": [Function],
             },
             "ref": null,
-            "rendered": Array [
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "function",
-                "props": Object {
-                  "children": [Function],
-                },
-                "ref": null,
-                "rendered": "1",
-                "type": [Function],
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "function",
-                "props": Object {
-                  "children": "2",
-                },
-                "ref": null,
-                "rendered": "2",
-                "type": [Function],
-              },
-            ],
+            "rendered": "1",
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "children": "2",
+            },
+            "ref": null,
+            "rendered": "2",
             "type": [Function],
           },
         ],
-        "type": "div",
+        "type": [Function],
       },
       "type": [Function],
     },

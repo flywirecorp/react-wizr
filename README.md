@@ -14,17 +14,17 @@ const WizardPage = () => (
         console.log(`Step changed: ${activeStepIndex}`)}
     >
       <Steps>
-        <Step path="select-country">
+        <Step>
           <Navigation
             render={({ goToNextStep }) => {
               return <CountrySelectionStep onSelected={goToNextStep} />;
             }}
           />
         </Step>
-        <Step path="customer-info">
+        <Step>
           <CustomerInformationStep />
         </Step>
-        <Step path="payment-info">
+        <Step>
           <Navigation
             render={({ goToNextStep }) => {
               return (
@@ -43,10 +43,10 @@ const WizardPage = () => (
 
 ```
 class App extends Component {
-  state = { 
+  state = {
 	activeStepIndex: 0
   }
-	  
+
   render() {
 	return(
 	  <Wizard activeStepIndex={this.state.activeStepIndex}>
