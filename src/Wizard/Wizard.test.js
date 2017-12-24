@@ -46,8 +46,7 @@ describe('Wizard', () => {
                 goToPrevStep = wizardGoToPrevStep;
                 goToStep = wizardGoToStep;
                 totalSteps = wizardTotalSteps;
-
-                return 1;
+                return null;
               }}
             </Step>
             <Step>2</Step>
@@ -65,8 +64,8 @@ describe('Wizard', () => {
       onStepChanged.mockReset();
     });
 
-    it('renders its children', () => {
-      expect(wrapper).toMatchSnapshot();
+    it('renders its steps', () => {
+      expect(wrapper.contains(Steps)).toBe(true);
     });
 
     it('returns the number of steps', () => {
@@ -152,7 +151,8 @@ describe('Wizard', () => {
             <Wizard
               activeStepIndex={this.state.activeStepIndex}
               onStepChanged={({ activeStepIndex }) =>
-                this.setState({ activeStepIndex })}
+                this.setState({ activeStepIndex })
+              }
             >
               <Steps>
                 <Step>

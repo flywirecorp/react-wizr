@@ -3,7 +3,7 @@ import { shallow } from 'enzyme';
 import Navigation from './Navigation';
 
 describe('Navigation', () => {
-  it('renders children', () => {
+  it('renders its children', () => {
     const Children = () => null;
     const wrapper = shallow(
       <Navigation>
@@ -11,7 +11,7 @@ describe('Navigation', () => {
       </Navigation>
     );
 
-    expect(wrapper).toMatchSnapshot();
+    expect(wrapper.contains(<Children />)).toBe(true);
   });
 
   it('exposes navigation context as props', () => {

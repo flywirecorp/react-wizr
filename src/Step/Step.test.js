@@ -4,12 +4,13 @@ import Step from './Step';
 
 describe('Step', () => {
   it('renders its children', () => {
+    const Children = () => null;
     const wrapper = shallow(
       <Step>
-        <div />
+        <Children />
       </Step>
     );
 
-    expect(wrapper).toMatchSnapshot();
+    expect(wrapper.contains(<Children />)).toBe(true);
   });
 });
