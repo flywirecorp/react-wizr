@@ -11,7 +11,8 @@ const WizardPage = () => (
   <div className="WizardPage">
     <Wizard
       onStepChanged={({ activeStepIndex }) =>
-        console.log(`Step changed: ${activeStepIndex}`)}
+        console.log(`Step changed: ${activeStepIndex}`)
+      }
     >
       <Steps>
         <Step>
@@ -27,16 +28,14 @@ const WizardPage = () => (
         <Step>
           <Navigation
             render={({ goToNextStep }) => {
-              return (
-                <PaymentMethodSelectionStep onSelected={goToNextStep} />
-              );
+              return <PaymentMethodSelectionStep onSelected={goToNextStep} />;
             }}
           />
         </Step>
       </Steps>
     </Wizard>
   </div>
-);
+)
 ```
 
 ### Controlled component
@@ -44,20 +43,26 @@ const WizardPage = () => (
 ```
 class App extends Component {
   state = {
-	activeStepIndex: 0
-  }
+    activeStepIndex: 0
+  };
 
   render() {
-	return(
-	  <Wizard activeStepIndex={this.state.activeStepIndex}>
-	    <Steps>
-	      <Step>
-	        <button onClick={() => this.setState({ activeStepIndex: 1 })>Go next step</button>
-	      </Step>
-	      <Step />
-	    </Steps>
-	  </Wizard>;
-	)   
+    return (
+      <Wizard activeStepIndex={this.state.activeStepIndex}>
+        <Steps>
+          <Step>
+            <button onClick={() => this.setState({ activeStepIndex: 1 })}>
+              Go next step
+            </button>
+          </Step>
+          <Step>
+            <button onClick={() => this.setState({ activeStepIndex: 0 })}>
+              Go prev step
+            </button>
+          </Step>
+        </Steps>
+      </Wizard>
+    );
   }
 }
 ```
