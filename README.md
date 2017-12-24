@@ -38,6 +38,8 @@ const WizardPage = () => (
 )
 ```
 
+[![Example 0xv49oqn0n](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/0xv49oqn0n)
+
 ### Controlled component
 
 ```
