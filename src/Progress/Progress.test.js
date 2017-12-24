@@ -6,7 +6,7 @@ describe('Progress', () => {
   it('returns the completion percentage', () => {
     let p = null;
     const context = { activeStepIndex: 1, totalSteps: 2 };
-    const wrapper = shallow(
+    shallow(
       <Progress
         render={({ percentage }) => {
           p = percentage;

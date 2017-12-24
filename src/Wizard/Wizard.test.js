@@ -123,7 +123,7 @@ describe('Wizard', () => {
   describe('passing defaultActiveStepIndex prop', () => {
     it('starts at given step', () => {
       let activeStepIndex;
-      const wrapper = mount(
+      mount(
         <Wizard defaultActiveStepIndex={1}>
           <Steps>
             <Step>

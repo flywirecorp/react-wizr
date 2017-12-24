@@ -8,7 +8,7 @@
   "scripts": {
     "build": "babel src -d lib --copy-files",
     "clean": "rimraf lib",
-    "lint": "eslint lib",
+    "lint": "eslint --fix src",
     "prebuild": "npm run clean && npm run lint",
     "prepublish": "npm run build",
     "test": "jest",
@@ -37,9 +37,22 @@
   },
   "eslintConfig": {
     "parser": "babel-eslint",
+    "env": {
+      "browser": true,
+      "es6": true,
+      "jest": true,
+      "node": true
+    },
     "plugins": [
+      "standard",
       "react",
       "prettier"
+    ],
+    "extends": [
+      "standard",
+      "standard-react",
+      "prettier",
+      "prettier/react"
     ],
     "rules": {
       "prettier/prettier": [
@@ -71,8 +84,15 @@
     "enzyme": "^3.1.0",
     "enzyme-adapter-react-16": "^1.1.0",
     "eslint": "^4.13.1",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-config-standard": "^11.0.0-beta.0",
+    "eslint-config-standard-react": "^5.0.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-node": "^5.2.1",
     "eslint-plugin-prettier": "^2.4.0",
+    "eslint-plugin-promise": "^3.6.0",
     "eslint-plugin-react": "^7.5.1",
+    "eslint-plugin-standard": "^3.0.1",
     "jest": "^21.2.1",
     "prettier": "^1.7.4",
     "react-test-renderer": "^16.2.0",

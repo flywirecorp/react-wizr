@@ -11,8 +11,11 @@ class Wizard extends Component {
   };
 
   static propTypes = {
+    activeStepIndex: PropTypes.number.isRequired,
+    children: PropTypes.node.isRequired,
     defaultActiveStepIndex: PropTypes.number,
-    onStepChanged: PropTypes.func
+    onStepChanged: PropTypes.func,
+    render: PropTypes.func
   };
 
   static defaultProps = {
