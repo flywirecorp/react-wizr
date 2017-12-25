@@ -33,7 +33,7 @@ describe('Wizard', () => {
       wrapper = mount(
         <Wizard onStepChanged={onStepChanged}>
           <Steps>
-            <Step>
+            <Step id="first">
               {({
                 activeStepIndex: wizardActiveStepIndex,
                 goToNextStep: wizardGoToNextStep,
@@ -49,7 +49,7 @@ describe('Wizard', () => {
                 return null;
               }}
             </Step>
-            <Step>2</Step>
+            <Step id="second">2</Step>
           </Steps>
         </Wizard>
       );
@@ -125,7 +125,8 @@ describe('Wizard', () => {
       mount(
         <Wizard defaultActiveStepIndex={1}>
           <Steps>
-            <Step>
+            <Step id="first">1</Step>
+            <Step id="second">
               {({ activeStepIndex: wizardActiveStepIndex }) => {
                 activeStepIndex = wizardActiveStepIndex;
                 return null;
@@ -155,14 +156,14 @@ describe('Wizard', () => {
               }
             >
               <Steps>
-                <Step>
+                <Step id="first">
                   {({ goToNextStep }) => {
                     return (
                       <button onClick={goToNextStep}>Go to next step</button>
                     );
                   }}
                 </Step>
-                <Step>2</Step>
+                <Step id="second">2</Step>
               </Steps>
             </Wizard>
           );
