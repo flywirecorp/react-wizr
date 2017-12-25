@@ -33,7 +33,7 @@ describe('Wizard', () => {
       wrapper = mount(
         <Wizard onStepChanged={onStepChanged}>
           <Steps>
-            <Step>
+            <Step id="first">
               {({
                 activeStepIndex: wizardActiveStepIndex,
                 goToNextStep: wizardGoToNextStep,
@@ -49,7 +49,7 @@ describe('Wizard', () => {
                 return null;
               }}
             </Step>
-            <Step>2</Step>
+            <Step id="second">2</Step>
           </Steps>
         </Wizard>
       );
@@ -125,7 +125,8 @@ describe('Wizard', () => {
       mount(
         <Wizard defaultActiveStepIndex={1}>
           <Steps>
-            <Step>
+            <Step id="first">1</Step>
+            <Step id="second">
               {({ activeStepIndex: wizardActiveStepIndex }) => {
                 activeStepIndex = wizardActiveStepIndex;
                 return null;
@@ -155,14 +156,14 @@ describe('Wizard', () => {
               }
             >
               <Steps>
-                <Step>
+                <Step id="first">
                   {({ goToNextStep }) => {
                     return (
                       <button onClick={goToNextStep}>Go to next step</button>
                     );
                   }}
                 </Step>
-                <Step>2</Step>
+                <Step id="second">2</Step>
               </Steps>
             </Wizard>
           );
@@ -173,6 +174,36 @@ describe('Wizard', () => {
       wrapper.find('button').simulate('click');
 
       expect(wrapper.state().activeStepIndex).toBe(1);
+    });
+  });
+
+  describe('passing history prop', () => {
+    it('appends the current step id in the URL', () => {
+      const push = jest.fn();
+      const history = {
+        listen: () => {},
+        push
+      };
+
+      const wrapper = mount(
+        <Wizard history={history} baseUrl="/steps">
+          <Steps>
+            <Step id="first">
+              {({ goToNextStep }) => {
+                return <button onClick={goToNextStep}>Go to next step</button>;
+              }}
+            </Step>
+            <Step id="second">2</Step>
+          </Steps>
+        </Wizard>
+      );
+
+      expect(push).toHaveBeenCalledWith('/steps/first');
+
+      push.mockClear();
+      wrapper.find('button').simulate('click');
+
+      expect(push).toHaveBeenCalledWith('/steps/second');
     });
   });
 });

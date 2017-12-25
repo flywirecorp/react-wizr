@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { createMemoryHistory } from 'history';
 
 class Wizard extends Component {
   static childContextTypes = {
@@ -12,7 +13,9 @@ class Wizard extends Component {
 
   static propTypes = {
     activeStepIndex: PropTypes.number,
+    baseUrl: PropTypes.string,
     children: PropTypes.node.isRequired,
+    history: PropTypes.object,
     defaultActiveStepIndex: PropTypes.number,
     onStepChanged: PropTypes.func,
     render: PropTypes.func
@@ -20,6 +23,7 @@ class Wizard extends Component {
 
   static defaultProps = {
     defaultActiveStepIndex: 0,
+    history: createMemoryHistory(),
     onStepChanged: () => {}
   };
 
@@ -28,6 +32,26 @@ class Wizard extends Component {
   state = {
     activeStepIndex: this.props.defaultActiveStepIndex
   };
+
+  componentWillMount() {
+    this.initWizard();
+  }
+
+  componentDidMount() {
+    const { baseUrl, history } = this.props;
+    const { steps } = this.state;
+
+    this.unlisten = history.listen(({ pathname }, action) => {
+      if (action === 'PUSH') return;
+      const id = pathname.replace(`${baseUrl}/`, '');
+      const stepIndex = steps.findIndex(step => step.id === id);
+      this.setState({ activeStepIndex: stepIndex });
+    });
+  }
+
+  componentWillUnmount() {
+    this.unlisten();
+  }
 
   getChildContext() {
     const { totalSteps } = this.state;
@@ -42,20 +66,22 @@ class Wizard extends Component {
     };
   }
 
-  componentWillMount() {
-    this.initWizard();
-  }
-
   initWizard() {
-    let totalSteps = 0;
+    const activeStepIndex = this.getActiveStepIndex();
+    const steps = [];
 
     React.Children.forEach(this.props.children, child => {
       if (child.type.name === 'Steps') {
-        totalSteps = React.Children.count(child.props.children);
+        React.Children.map(child.props.children, ({ props: { id } }) =>
+          steps.push({ id })
+        );
       }
     });
 
-    this.setState({ totalSteps });
+    this.setState({ steps, totalSteps: steps.length });
+
+    const { id } = steps[activeStepIndex];
+    this.push(id);
   }
 
   getActiveStepIndex() {
@@ -77,23 +103,29 @@ class Wizard extends Component {
   };
 
   goToStep = index => {
-    const { totalSteps } = this.state;
+    const { onStepChanged } = this.props;
+    const { totalSteps, steps } = this.state;
+    const outOfRange = index < this.firstStep || index > totalSteps - 1;
+    const isUncontrolled = this.isUncontrolled();
 
-    if (index < this.firstStep || index > totalSteps - 1) {
-      return;
-    }
-
-    if (this.isUncontrolled()) {
+    if (outOfRange) return;
+    if (isUncontrolled) {
       this.setState({ activeStepIndex: index });
     }
 
-    this.props.onStepChanged({
-      activeStepIndex: index
-    });
+    const { id } = steps[index];
+    this.push(id);
+
+    onStepChanged({ activeStepIndex: index });
   };
 
   isUncontrolled() {
     return typeof this.props.activeStepIndex === 'undefined';
+  }
+
+  push(path) {
+    const { history } = this.props;
+    history.push(`${this.props.baseUrl}/${path}`);
   }
 
   render() {
