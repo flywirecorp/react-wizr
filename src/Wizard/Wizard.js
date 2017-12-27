@@ -15,8 +15,8 @@ class Wizard extends Component {
     activeStepIndex: PropTypes.number,
     baseUrl: PropTypes.string,
     children: PropTypes.node.isRequired,
-    history: PropTypes.object,
     defaultActiveStepIndex: PropTypes.number,
+    history: PropTypes.object,
     onStepChanged: PropTypes.func,
     render: PropTypes.func
   };
@@ -27,31 +27,9 @@ class Wizard extends Component {
     onStepChanged: () => {}
   };
 
-  firstStep = 0;
-
   state = {
     activeStepIndex: this.props.defaultActiveStepIndex
   };
-
-  componentWillMount() {
-    this.initWizard();
-  }
-
-  componentDidMount() {
-    const { baseUrl, history } = this.props;
-    const { steps } = this.state;
-
-    this.unlisten = history.listen(({ pathname }, action) => {
-      if (action === 'PUSH') return;
-      const id = pathname.replace(`${baseUrl}/`, '');
-      const stepIndex = steps.findIndex(step => step.id === id);
-      this.setState({ activeStepIndex: stepIndex });
-    });
-  }
-
-  componentWillUnmount() {
-    this.unlisten();
-  }
 
   getChildContext() {
     const { totalSteps } = this.state;
@@ -65,6 +43,28 @@ class Wizard extends Component {
       totalSteps
     };
   }
+
+  componentWillMount() {
+    this.initWizard();
+  }
+
+  componentDidMount() {
+    const { baseUrl, history } = this.props;
+    const { steps } = this.state;
+
+    this.unlisten = history.listen(({ pathname }, action) => {
+      if (action === 'PUSH') return;
+      const path = pathname.replace(`${baseUrl}/`, '');
+      const stepIndex = steps.findIndex(step => step.id === path);
+      this.setActiveStepIndex(stepIndex);
+    });
+  }
+
+  componentWillUnmount() {
+    this.unlisten();
+  }
+
+  firstStep = 0;
 
   initWizard() {
     const activeStepIndex = this.getActiveStepIndex();
@@ -103,20 +103,14 @@ class Wizard extends Component {
   };
 
   goToStep = index => {
-    const { onStepChanged } = this.props;
     const { totalSteps, steps } = this.state;
     const outOfRange = index < this.firstStep || index > totalSteps - 1;
-    const isUncontrolled = this.isUncontrolled();
 
     if (outOfRange) return;
-    if (isUncontrolled) {
-      this.setState({ activeStepIndex: index });
-    }
+    this.setActiveStepIndex(index);
 
-    const { id } = steps[index];
-    this.push(id);
-
-    onStepChanged({ activeStepIndex: index });
+    const path = steps[index].id;
+    this.push(path);
   };
 
   isUncontrolled() {
@@ -126,6 +120,17 @@ class Wizard extends Component {
   push(path) {
     const { history } = this.props;
     history.push(`${this.props.baseUrl}/${path}`);
+  }
+
+  setActiveStepIndex(index) {
+    const { onStepChanged } = this.props;
+    const isUncontrolled = this.isUncontrolled();
+
+    if (isUncontrolled) {
+      this.setState({ activeStepIndex: index });
+    }
+
+    onStepChanged({ activeStepIndex: index });
   }
 
   render() {
