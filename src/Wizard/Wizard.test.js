@@ -152,8 +152,7 @@ describe('Wizard', () => {
             <Wizard
               activeStepIndex={this.state.activeStepIndex}
               onStepChanged={({ activeStepIndex }) =>
-                this.setState({ activeStepIndex })
-              }
+                this.setState({ activeStepIndex })}
             >
               <Steps>
                 <Step id="first">
@@ -204,6 +203,28 @@ describe('Wizard', () => {
       wrapper.find('button').simulate('click');
 
       expect(push).toHaveBeenCalledWith('/steps/second');
+    });
+
+    describe('with conditional step', () => {
+      it('ignores the step', () => {
+        const push = jest.fn();
+        const history = {
+          listen: () => {},
+          push
+        };
+
+        mount(
+          <Wizard history={history} baseUrl="/steps">
+            <Steps>
+              {false && <Step id="first">1</Step>}
+              <Step id="second">2</Step>
+            </Steps>
+          </Wizard>
+        );
+
+        expect(push).not.toHaveBeenCalledWith('/steps/first');
+        expect(push).toHaveBeenCalledWith('/steps/second');
+      });
     });
   });
 });

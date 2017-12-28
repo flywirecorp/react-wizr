@@ -71,14 +71,20 @@ class Wizard extends Component {
     const steps = [];
 
     React.Children.forEach(this.props.children, child => {
-      if (child.type.name === 'Steps') {
-        React.Children.map(child.props.children, ({ props: { id } }) =>
-          steps.push({ id })
-        );
+      if (child && child.type.name === 'Steps') {
+        const { props: { children } } = child;
+        React.Children.forEach(children, child => {
+          if (child && child.type.name === 'Step') {
+            const { props: { id } } = child;
+            steps.push({ id });
+          }
+        });
       }
     });
 
     this.setState({ steps, totalSteps: steps.length });
+
+    if (steps.length === 0) return;
 
     const { id } = steps[activeStepIndex];
     this.push(id);
