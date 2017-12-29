@@ -10,7 +10,7 @@ const Progress = ({ children, render }, { activeStepIndex, totalSteps }) => {
   return children({ percentage });
 };
 
-PropTypes.contextTypes = {
+Progress.contextTypes = {
   activeStepIndex: PropTypes.number.isRequired,
   totalSteps: PropTypes.number.isRequired
 };
