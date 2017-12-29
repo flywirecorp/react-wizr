@@ -13,7 +13,6 @@ const App = () => (
       console.log(`Step changed: ${activeStepIndex}`)
     }
   >
-    <ProgressBar />
     <Steps>
       <Step id="first">
         <section>
@@ -73,7 +72,6 @@ class App extends Component {
           console.log(`Step changed: ${activeStepIndex}`);
         }}
       >
-        <ProgressBar />
         <Steps>
           <Step id="first">
             <section>
@@ -141,7 +139,6 @@ const App = () => (
               console.log(`Step changed: ${activeStepIndex}`)
             }
           >
-            <ProgressBar />
             <Steps>
               <Step id="first">
                 <section>
