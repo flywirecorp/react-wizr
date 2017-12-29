@@ -13,27 +13,45 @@ const App = () => (
       console.log(`Step changed: ${activeStepIndex}`)
     }
   >
+    <ProgressBar />
     <Steps>
-      <Step id="country">
-        <Navigation
-          render={({ goToNextStep }) => {
-            return <CountrySelectionStep onSelected={goToNextStep} />;
-          }}
-        />
+      <Step id="first">
+        <section>
+          Minions ipsum tulaliloo la bodaaa tatata bala tu la bodaaa. Aaaaaah
+          para tú aaaaaah hahaha ti aamoo! Bappleees belloo! Tatata bala tu
+          bappleees. Uuuhhh para tú underweaaar poopayee hahaha chasy me want
+          bananaaa! Potatoooo ti aamoo! Baboiii.
+        </section>
       </Step>
-      <Step id="customer">
-        <CustomerInformationStep />
+      <Step id="second">
+        <section>
+          Belloo! tatata bala tu chasy poopayee ti aamoo! Para tú bee do bee do
+          bee do belloo! Tatata bala tu hahaha bappleees me want bananaaa!
+          Belloo! Hana dul sae belloo! Tatata bala tu gelatooo. Chasy tank yuuu!
+          Underweaaar belloo! Gelatooo.
+        </section>
       </Step>
-      <Step id="offer">
-        <Navigation
-          render={({ goToNextStep }) => {
-            return <PaymentMethodSelectionStep onSelected={goToNextStep} />;
-          }}
-        />
+      <Step id="third">
+        <section>
+          Poopayee poulet tikka masala potatoooo aaaaaah pepete gelatooo baboiii
+          daa. Bananaaaa potatoooo poulet tikka masala hana dul sae uuuhhh
+          tulaliloo. Poopayee jiji tank yuuu! Jiji potatoooo bappleees belloo!
+          Uuuhhh bappleees chasy.
+        </section>
       </Step>
     </Steps>
+    <Navigation
+      render={({ activeStepIndex, goToNextStep, goToPrevStep, totalSteps }) => (
+        <div>
+          {activeStepIndex > 0 && <button onClick={goToPrevStep}>Back</button>}
+          {activeStepIndex < totalSteps - 1 && (
+            <button onClick={goToNextStep}>Next</button>
+          )}
+        </div>
+      )}
+    />
   </Wizard>
-)
+);
 ```
 
 [![Edit on CodeSandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/0xv49oqn0n)
@@ -48,65 +66,132 @@ class App extends Component {
 
   render() {
     return (
-      <Wizard activeStepIndex={this.state.activeStepIndex}>
+      <Wizard
+        activeStepIndex={this.state.activeStepIndex}
+        onStepChanged={({ activeStepIndex }) => {
+          this.setState({ activeStepIndex });
+          console.log(`Step changed: ${activeStepIndex}`);
+        }}
+      >
+        <ProgressBar />
         <Steps>
           <Step id="first">
-            <button onClick={() => this.setState({ activeStepIndex: 1 })}>
-              Go next step
-            </button>
+            <section>
+              Minions ipsum tulaliloo la bodaaa tatata bala tu la bodaaa.
+              Aaaaaah para tú aaaaaah hahaha ti aamoo! Bappleees belloo! Tatata
+              bala tu bappleees. Uuuhhh para tú underweaaar poopayee hahaha
+              chasy me want bananaaa! Potatoooo ti aamoo! Baboiii.
+            </section>
           </Step>
           <Step id="second">
-            <button onClick={() => this.setState({ activeStepIndex: 0 })}>
-              Go prev step
-            </button>
+            <section>
+              Belloo! tatata bala tu chasy poopayee ti aamoo! Para tú bee do bee
+              do bee do belloo! Tatata bala tu hahaha bappleees me want
+              bananaaa! Belloo! Hana dul sae belloo! Tatata bala tu gelatooo.
+              Chasy tank yuuu! Underweaaar belloo! Gelatooo.
+            </section>
+          </Step>
+          <Step id="third">
+            <section>
+              Poopayee poulet tikka masala potatoooo aaaaaah pepete gelatooo
+              baboiii daa. Bananaaaa potatoooo poulet tikka masala hana dul sae
+              uuuhhh tulaliloo. Poopayee jiji tank yuuu! Jiji potatoooo
+              bappleees belloo! Uuuhhh bappleees chasy.
+            </section>
           </Step>
         </Steps>
+        <Navigation
+          render={({
+            activeStepIndex,
+            goToNextStep,
+            goToPrevStep,
+            totalSteps
+          }) => (
+            <div>
+              {activeStepIndex > 0 && (
+                <button onClick={goToPrevStep}>Back</button>
+              )}
+              {activeStepIndex < totalSteps - 1 && (
+                <button onClick={goToNextStep}>Next</button>
+              )}
+            </div>
+          )}
+        />
       </Wizard>
     );
   }
 }
 ```
 
+[![Edit react-wizr controlled](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/yprkvpm4wz)
+
 ### Routed
 
 ```
-class App extends Component {
-  render() {
-    return (
-      <Router>
-        <Route
-          path="/steps"
-          render={({ history, match: { url } }) => (
-            <Wizard history={history} baseUrl={url}>
-              <Steps>
-                <Step id="one">
-                  <h1>Step 1</h1>
-                  <Navigation
-                    render={({ goToNextStep }) => {
-                      return (
-                        <button onClick={goToNextStep}>Go To Step 2</button>
-                      );
-                    }}
-                  />
-                </Step>
-                <Step id="two">
-                  <h1>Step 2</h1>
-                  <Navigation
-                    render={({, goToPrevStep }) => {
-                      return (
-                        <button onClick={goToPrevStep}>Go To Step 1</button>
-                      );
-                    }}
-                  />
-                </Step>
-              </Steps>
-            </Wizard>
-          )}
-        />
-      </Router>
-    );
-  }
-}
+const App = () => (
+  <Router>
+    <Switch>
+      <Route
+        path="/steps"
+        render={({ history, match: { url } }) => (
+          <Wizard
+            history={history}
+            baseUrl={url}
+            onStepChanged={({ activeStepIndex }) =>
+              console.log(`Step changed: ${activeStepIndex}`)
+            }
+          >
+            <ProgressBar />
+            <Steps>
+              <Step id="first">
+                <section>
+                  Minions ipsum tulaliloo la bodaaa tatata bala tu la bodaaa.
+                  Aaaaaah para tú aaaaaah hahaha ti aamoo! Bappleees belloo!
+                  Tatata bala tu bappleees. Uuuhhh para tú underweaaar poopayee
+                  hahaha chasy me want bananaaa! Potatoooo ti aamoo! Baboiii.
+                </section>
+              </Step>
+              <Step id="second">
+                <section>
+                  Belloo! tatata bala tu chasy poopayee ti aamoo! Para tú bee do
+                  bee do bee do belloo! Tatata bala tu hahaha bappleees me want
+                  bananaaa! Belloo! Hana dul sae belloo! Tatata bala tu
+                  gelatooo. Chasy tank yuuu! Underweaaar belloo! Gelatooo.{' '}
+                </section>
+              </Step>
+              <Step id="third">
+                <section>
+                  Poopayee poulet tikka masala potatoooo aaaaaah pepete gelatooo
+                  baboiii daa. Bananaaaa potatoooo poulet tikka masala hana dul
+                  sae uuuhhh tulaliloo. Poopayee jiji tank yuuu! Jiji potatoooo
+                  bappleees belloo! Uuuhhh bappleees chasy.
+                </section>
+              </Step>
+            </Steps>
+            <Navigation
+              render={({
+                activeStepIndex,
+                goToNextStep,
+                goToPrevStep,
+                totalSteps
+              }) => (
+                <div>
+                  {activeStepIndex > 0 && (
+                    <button onClick={goToPrevStep}>Back</button>
+                  )}
+                  {activeStepIndex < totalSteps - 1 && (
+                    <button onClick={goToNextStep}>Next</button>
+                  )}
+                </div>
+              )}
+            />
+          </Wizard>
+        )}
+      />
+      <Redirect from="/" to="/steps" />
+    </Switch>
+  </Router>
+);
 ```
 
 [![Edit on CodeSandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/l2jmypvp1m)
