@@ -55,12 +55,16 @@ describe('Wizard', () => {
       );
     });
 
-    const firstStep = 0;
-    const secondStep = 1;
-    const lastStep = secondStep;
-    const goToLastStep = () => goToStep(lastStep);
+    let firstStep;
+    let secondStep;
+    let lastStep;
+    let goToLastStep;
 
-    afterEach(function() {
+    beforeEach(() => {
+      firstStep = 0;
+      secondStep = 1;
+      lastStep = secondStep;
+      goToLastStep = () => goToStep(lastStep);
       onStepChanged.mockReset();
     });
 
@@ -152,7 +156,8 @@ describe('Wizard', () => {
             <Wizard
               activeStepIndex={this.state.activeStepIndex}
               onStepChanged={({ activeStepIndex }) =>
-                this.setState({ activeStepIndex })}
+                this.setState({ activeStepIndex })
+              }
             >
               <Steps>
                 <Step id="first">
@@ -179,9 +184,11 @@ describe('Wizard', () => {
   describe('passing history prop', () => {
     it('appends the current step id in the URL', () => {
       const push = jest.fn();
+      const replace = jest.fn();
       const history = {
         listen: () => {},
-        push
+        push,
+        replace
       };
 
       const wrapper = mount(
@@ -197,9 +204,8 @@ describe('Wizard', () => {
         </Wizard>
       );
 
-      expect(push).toHaveBeenCalledWith('/steps/first');
+      expect(replace).toHaveBeenCalledWith('/steps/first');
 
-      push.mockClear();
       wrapper.find('button').simulate('click');
 
       expect(push).toHaveBeenCalledWith('/steps/second');
@@ -208,9 +214,11 @@ describe('Wizard', () => {
     describe('with conditional step', () => {
       it('ignores the step', () => {
         const push = jest.fn();
+        const replace = jest.fn();
         const history = {
           listen: () => {},
-          push
+          push,
+          replace
         };
 
         mount(
@@ -222,8 +230,8 @@ describe('Wizard', () => {
           </Wizard>
         );
 
-        expect(push).not.toHaveBeenCalledWith('/steps/first');
-        expect(push).toHaveBeenCalledWith('/steps/second');
+        expect(replace).not.toHaveBeenCalledWith('/steps/first');
+        expect(replace).toHaveBeenCalledWith('/steps/second');
       });
     });
   });

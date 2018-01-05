@@ -53,7 +53,9 @@ class Wizard extends Component {
     const { steps } = this.state;
 
     this.unlisten = history.listen(({ pathname }, action) => {
-      if (action === 'PUSH') return;
+      const noBrowserNavigationKeysPressed = action !== 'POP';
+      if (noBrowserNavigationKeysPressed) return;
+
       const path = pathname.replace(`${baseUrl}/`, '');
       const stepIndex = steps.findIndex(step => step.id === path);
       this.setActiveStepIndex(stepIndex);
@@ -87,7 +89,7 @@ class Wizard extends Component {
     if (steps.length === 0) return;
 
     const { id } = steps[activeStepIndex];
-    this.push(id);
+    this.replace(id);
   }
 
   getActiveStepIndex() {
@@ -120,12 +122,18 @@ class Wizard extends Component {
   };
 
   isUncontrolled() {
-    return typeof this.props.activeStepIndex === 'undefined';
+    const { activeStepIndex } = this.props;
+    return typeof activeStepIndex === 'undefined';
   }
 
   push(path) {
-    const { history } = this.props;
-    history.push(`${this.props.baseUrl}/${path}`);
+    const { baseUrl, history } = this.props;
+    history.push(`${baseUrl}/${path}`);
+  }
+
+  replace(path) {
+    const { baseUrl, history } = this.props;
+    history.replace(`${baseUrl}/${path}`);
   }
 
   setActiveStepIndex(index) {
