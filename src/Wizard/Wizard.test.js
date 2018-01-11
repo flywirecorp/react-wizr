@@ -4,11 +4,18 @@ import { mount } from 'enzyme';
 import Wizard from './Wizard';
 
 const Steps = ({ children }) => children;
+Steps.defaultProps = {
+  isSteps: true
+};
+
 const Step = ({ children }, context) => {
   if (typeof children === 'function') {
     return children(context);
   }
   return children;
+};
+Step.defaultProps = {
+  isStep: true
 };
 
 Step.contextTypes = {

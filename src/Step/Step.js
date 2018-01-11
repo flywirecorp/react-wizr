@@ -6,4 +6,8 @@ const Step = ({ children, render }) => {
   return children;
 };
 
+Step.defaultProps = {
+  isStep: true
+};
+
 export default Step;

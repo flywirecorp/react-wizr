@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Children } from 'react';
 import PropTypes from 'prop-types';
 import { createMemoryHistory } from 'history';
 
@@ -69,14 +69,16 @@ class Wizard extends Component {
   firstStep = 0;
 
   initWizard() {
+    const { children } = this.props;
     const activeStepIndex = this.getActiveStepIndex();
     const steps = [];
 
-    React.Children.forEach(this.props.children, child => {
-      if (child && child.type.name === 'Steps') {
-        const { props: { children } } = child;
-        React.Children.forEach(children, child => {
-          if (child && child.type.name === 'Step') {
+    Children.forEach(children, child => {
+      if (child && child.props.isSteps) {
+        const { props: { children: grandchildren } } = child;
+
+        Children.forEach(grandchildren, child => {
+          if (child && child.props.isStep) {
             const { props: { id } } = child;
             steps.push({ id });
           }

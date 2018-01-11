@@ -7,6 +7,10 @@ const Steps = ({ children }, { activeStepIndex }) => {
   return currentStep;
 };
 
+Steps.defaultProps = {
+  isSteps: true
+};
+
 Steps.contextTypes = {
   activeStepIndex: PropTypes.number.isRequired
 };
