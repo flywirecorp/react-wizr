@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { mount } from 'enzyme';
+import { mount, shallow } from 'enzyme';
 import Wizard from './Wizard';
 
 const Steps = ({ children }) => children;
@@ -238,6 +238,32 @@ describe('Wizard', () => {
 
         expect(replace).not.toHaveBeenCalledWith('/steps/first');
         expect(replace).toHaveBeenCalledWith('/steps/second');
+      });
+    });
+
+    describe('with new props', () => {
+      const component = shallow(
+        <Wizard>
+          <Steps />
+        </Wizard>
+      );
+      const spy = jest.spyOn(Wizard.prototype, 'initWizard');
+
+      afterEach(() => {
+        spy.mockReset();
+        spy.mockRestore();
+      });
+
+      it('calls init wizard', () => {
+        component.setProps({ children: <Steps /> });
+
+        expect(spy).toHaveBeenCalled();
+      });
+
+      it('does not init wizard when children are not updated', () => {
+        component.setProps({ aProp: 'prop' });
+
+        expect(spy).not.toHaveBeenCalled();
       });
     });
   });

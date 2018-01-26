@@ -44,6 +44,12 @@ class Wizard extends Component {
     };
   }
 
+  componentWillReceiveProps(newProps) {
+    if (newProps.children !== this.props.children) {
+      this.initWizard();
+    }
+  }
+
   componentWillMount() {
     this.initWizard();
   }
