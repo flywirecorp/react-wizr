@@ -164,8 +164,7 @@ describe('Wizard', () => {
             <Wizard
               activeStepIndex={this.state.activeStepIndex}
               onStepChanged={({ activeStepIndex }) =>
-                this.setState({ activeStepIndex })
-              }
+                this.setState({ activeStepIndex })}
             >
               <Steps>
                 <Step id="first">

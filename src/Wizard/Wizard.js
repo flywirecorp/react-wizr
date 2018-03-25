@@ -100,11 +100,6 @@ class Wizard extends Component {
     this.replace(id);
   }
 
-  get activeStep() {
-    const { steps } = this.state;
-    return steps[this.activeStepIndex];
-  }
-
   get activeStepIndex() {
     return this.isUncontrolled()
       ? this.state.activeStepIndex
@@ -151,6 +146,7 @@ class Wizard extends Component {
 
   setActiveStepIndex(index) {
     const { onStepChanged } = this.props;
+    const { steps } = this.state;
     const isUncontrolled = this.isUncontrolled();
 
     if (isUncontrolled) {
@@ -159,7 +155,7 @@ class Wizard extends Component {
 
     onStepChanged({
       activeStepIndex: index,
-      step: this.activeStep
+      step: steps[index]
     });
   }
 
