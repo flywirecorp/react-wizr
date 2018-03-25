@@ -33,7 +33,7 @@ class Wizard extends Component {
 
   getChildContext() {
     const { totalSteps } = this.state;
-    const activeStepIndex = this.getActiveStepIndex();
+    const activeStepIndex = this.activeStepIndex;
 
     return {
       activeStepIndex,
@@ -76,7 +76,7 @@ class Wizard extends Component {
 
   initWizard() {
     const { children } = this.props;
-    const activeStepIndex = this.getActiveStepIndex();
+    const activeStepIndex = this.activeStepIndex;
     const steps = [];
 
     Children.forEach(children, child => {
@@ -100,20 +100,25 @@ class Wizard extends Component {
     this.replace(id);
   }
 
-  getActiveStepIndex() {
+  get activeStep() {
+    const { steps } = this.state;
+    return steps[this.activeStepIndex];
+  }
+
+  get activeStepIndex() {
     return this.isUncontrolled()
       ? this.state.activeStepIndex
       : this.props.activeStepIndex;
   }
 
   goToPrevStep = () => {
-    const activeStepIndex = this.getActiveStepIndex();
+    const activeStepIndex = this.activeStepIndex;
 
     this.goToStep(activeStepIndex - 1);
   };
 
   goToNextStep = () => {
-    const activeStepIndex = this.getActiveStepIndex();
+    const activeStepIndex = this.activeStepIndex;
 
     this.goToStep(activeStepIndex + 1);
   };
@@ -152,7 +157,10 @@ class Wizard extends Component {
       this.setState({ activeStepIndex: index });
     }
 
-    onStepChanged({ activeStepIndex: index });
+    onStepChanged({
+      activeStepIndex: index,
+      step: this.activeStep
+    });
   }
 
   render() {

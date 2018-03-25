@@ -125,7 +125,8 @@ describe('Wizard', () => {
       goToNextStep();
 
       expect(onStepChanged).toBeCalledWith({
-        activeStepIndex: 1
+        activeStepIndex: 1,
+        step: { id: 'second' }
       });
     });
   });
@@ -163,7 +164,8 @@ describe('Wizard', () => {
             <Wizard
               activeStepIndex={this.state.activeStepIndex}
               onStepChanged={({ activeStepIndex }) =>
-                this.setState({ activeStepIndex })}
+                this.setState({ activeStepIndex })
+              }
             >
               <Steps>
                 <Step id="first">
