@@ -46,7 +46,7 @@ class Wizard extends Component {
 
   componentWillReceiveProps(newProps) {
     if (newProps.children !== this.props.children) {
-      this.initWizard();
+      this.setSteps();
     }
   }
 
@@ -75,8 +75,16 @@ class Wizard extends Component {
   firstStep = 0;
 
   initWizard() {
-    const { children } = this.props;
     const activeStepIndex = this.activeStepIndex;
+    const steps = this.setSteps();
+    if (steps.length === 0) return;
+
+    const { id } = steps[activeStepIndex];
+    this.replace(id);
+  }
+
+  setSteps() {
+    const { children } = this.props;
     const steps = [];
 
     Children.forEach(children, child => {
@@ -94,10 +102,7 @@ class Wizard extends Component {
 
     this.setState({ steps, totalSteps: steps.length });
 
-    if (steps.length === 0) return;
-
-    const { id } = steps[activeStepIndex];
-    this.replace(id);
+    return steps;
   }
 
   get activeStepIndex() {
