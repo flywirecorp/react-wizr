@@ -249,16 +249,16 @@ describe('Wizard', () => {
         </Wizard>
       );
 
-      it('calls init wizard', () => {
-        const spy = jest.spyOn(Wizard.prototype, 'initWizard');
+      it('sets new steps', () => {
+        const spy = jest.spyOn(Wizard.prototype, 'setSteps');
         component.setProps({ children: <Steps /> });
 
         expect(spy).toHaveBeenCalledTimes(1);
         spy.mockRestore();
       });
 
-      it('does not init wizard when children are not updated', () => {
-        const spy = jest.spyOn(Wizard.prototype, 'initWizard');
+      it('does not set new steps when children are not updated', () => {
+        const spy = jest.spyOn(Wizard.prototype, 'setSteps');
         component.setProps({ aProp: 'prop' });
 
         expect(spy).not.toHaveBeenCalled();
