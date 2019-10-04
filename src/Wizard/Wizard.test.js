@@ -34,7 +34,7 @@ describe('Wizard', () => {
     let goToPrevStep;
     let goToStep;
     let totalSteps;
-    let onStepChanged = jest.fn();
+    const onStepChanged = jest.fn();
 
     beforeEach(() => {
       wrapper = mount(
@@ -164,7 +164,8 @@ describe('Wizard', () => {
             <Wizard
               activeStepIndex={this.state.activeStepIndex}
               onStepChanged={({ activeStepIndex }) =>
-                this.setState({ activeStepIndex })}
+                this.setState({ activeStepIndex })
+              }
             >
               <Steps>
                 <Step id="first">

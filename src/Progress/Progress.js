@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 
 const Progress = ({ children, render }, { activeStepIndex, totalSteps }) => {
-  const percentage = (activeStepIndex + 1) * 100 / totalSteps;
+  const percentage = ((activeStepIndex + 1) * 100) / totalSteps;
 
   if (render) {
     return render({ percentage });

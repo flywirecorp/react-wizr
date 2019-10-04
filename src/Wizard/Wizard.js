@@ -44,13 +44,13 @@ class Wizard extends Component {
     };
   }
 
-  componentWillReceiveProps(newProps) {
+  UNSAFE_componentWillReceiveProps(newProps) {
     if (newProps.children !== this.props.children) {
       this.setSteps();
     }
   }
 
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     this.initWizard();
   }
 
@@ -89,11 +89,15 @@ class Wizard extends Component {
 
     Children.forEach(children, child => {
       if (child && child.props.isSteps) {
-        const { props: { children: grandchildren } } = child;
+        const {
+          props: { children: grandchildren }
+        } = child;
 
         Children.forEach(grandchildren, child => {
           if (child && child.props.isStep) {
-            const { props: { id } } = child;
+            const {
+              props: { id }
+            } = child;
             steps.push({ id });
           }
         });
