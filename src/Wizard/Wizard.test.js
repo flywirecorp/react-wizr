@@ -35,10 +35,11 @@ describe('Wizard', () => {
     let goToStep;
     let totalSteps;
     const onStepChanged = jest.fn();
+    const onWizardFinished = jest.fn();
 
     beforeEach(() => {
       wrapper = mount(
-        <Wizard onStepChanged={onStepChanged}>
+        <Wizard onStepChanged={onStepChanged} onWizardFinished={onWizardFinished}>
           <Steps>
             <Step id="first">
               {({
@@ -73,6 +74,7 @@ describe('Wizard', () => {
       lastStep = secondStep;
       goToLastStep = () => goToStep(lastStep);
       onStepChanged.mockReset();
+      onWizardFinished.mockReset();
     });
 
     it('renders its steps', () => {
@@ -106,6 +108,13 @@ describe('Wizard', () => {
 
       expect(activeStepIndex).toBe(lastStep);
     });
+
+    it('executes onFinishWizard callback when trying to navigate to last step', () => {
+      goToLastStep();
+      goToNextStep();
+
+      expect(onWizardFinished).toHaveBeenCalled();
+    })
 
     it('moves back to prev step', () => {
       goToStep(secondStep);
