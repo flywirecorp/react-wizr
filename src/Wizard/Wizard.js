@@ -18,13 +18,15 @@ class Wizard extends Component {
     defaultActiveStepIndex: PropTypes.number,
     history: PropTypes.object,
     onStepChanged: PropTypes.func,
+    onWizardFinished: PropTypes.func,
     render: PropTypes.func
   };
 
   static defaultProps = {
     defaultActiveStepIndex: 0,
     history: createMemoryHistory(),
-    onStepChanged: () => {}
+    onStepChanged: () => {},
+    onWizardFinished: () => {}
   };
 
   state = {
@@ -129,9 +131,10 @@ class Wizard extends Component {
 
   goToStep = index => {
     const { totalSteps, steps } = this.state;
-    const outOfRange = index < this.firstStep || index > totalSteps - 1;
+    const { onWizardFinished } = this.props;
+    const lastStep = index < this.firstStep || index > totalSteps - 1;
 
-    if (outOfRange) return;
+    if (lastStep) return onWizardFinished();
     this.setActiveStepIndex(index);
 
     const path = steps[index].id;
