@@ -8,11 +8,11 @@ const Steps = ({ children }, { activeStepIndex }) => {
 };
 
 Steps.defaultProps = {
-  isSteps: true
+  isSteps: true,
 };
 
 Steps.contextTypes = {
-  activeStepIndex: PropTypes.number.isRequired
+  activeStepIndex: PropTypes.number.isRequired,
 };
 
 export default Steps;

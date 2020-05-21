@@ -12,7 +12,7 @@ const Progress = ({ children, render }, { activeStepIndex, totalSteps }) => {
 
 Progress.contextTypes = {
   activeStepIndex: PropTypes.number.isRequired,
-  totalSteps: PropTypes.number.isRequired
+  totalSteps: PropTypes.number.isRequired,
 };
 
 export default Progress;

@@ -20,19 +20,19 @@ describe('Navigation', () => {
       goToNextStep: jest.fn(),
       goToPrevStep: jest.fn(),
       goToStep: jest.fn(),
-      totalSteps: 2
+      totalSteps: 2,
     };
 
     let navigationProps;
 
     shallow(
       <Navigation
-        render={props => {
+        render={(props) => {
           navigationProps = props;
         }}
       />,
       {
-        context
+        context,
       }
     );
 

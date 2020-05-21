@@ -7,7 +7,7 @@ const Step = ({ children, render }) => {
 };
 
 Step.defaultProps = {
-  isStep: true
+  isStep: true,
 };
 
 export default Step;

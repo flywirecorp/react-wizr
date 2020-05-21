@@ -13,7 +13,7 @@ Navigation.contextTypes = {
   goToNextStep: PropTypes.func.isRequired,
   goToPrevStep: PropTypes.func.isRequired,
   goToStep: PropTypes.func.isRequired,
-  totalSteps: PropTypes.number.isRequired
+  totalSteps: PropTypes.number.isRequired,
 };
 
 export default Navigation;
