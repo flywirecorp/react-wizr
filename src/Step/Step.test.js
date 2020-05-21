@@ -8,7 +8,7 @@ describe('Step', () => {
     const wrapper = shallow(
       <Step>
         <Children />
-      </Step>
+      </Step>,
     );
 
     expect(wrapper.contains(<Children />)).toBe(true);

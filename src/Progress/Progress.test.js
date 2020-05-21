@@ -1,18 +1,26 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { mount } from 'enzyme';
 import Progress from './Progress';
+import WizardContext from '../context';
 
 describe('Progress', () => {
   it('returns the completion percentage', () => {
     let percentage = null;
-    const context = { activeStepIndex: 0, totalSteps: 4 };
-    shallow(
-      <Progress
-        render={({ percentage: p }) => {
-          percentage = p;
+
+    mount(
+      <WizardContext.Provider
+        value={{
+          activeStepIndex: 0,
+          totalSteps: 4,
         }}
-      />,
-      { context }
+      >
+        <Progress
+          render={({ percentage: p }) => {
+            percentage = p;
+            return null;
+          }}
+        />
+      </WizardContext.Provider>,
     );
 
     expect(percentage).toEqual(25);
@@ -20,14 +28,21 @@ describe('Progress', () => {
 
   it('returns the completion percentage', () => {
     let percentage = null;
-    const context = { activeStepIndex: 1, totalSteps: 4 };
-    shallow(
-      <Progress
-        render={({ percentage: p }) => {
-          percentage = p;
+
+    mount(
+      <WizardContext.Provider
+        value={{
+          activeStepIndex: 1,
+          totalSteps: 4,
         }}
-      />,
-      { context }
+      >
+        <Progress
+          render={({ percentage: p }) => {
+            percentage = p;
+            return null;
+          }}
+        />
+      </WizardContext.Provider>,
     );
 
     expect(percentage).toEqual(50);
@@ -35,14 +50,21 @@ describe('Progress', () => {
 
   it('returns the completion percentage', () => {
     let percentage = null;
-    const context = { activeStepIndex: 2, totalSteps: 4 };
-    shallow(
-      <Progress
-        render={({ percentage: p }) => {
-          percentage = p;
+
+    mount(
+      <WizardContext.Provider
+        value={{
+          activeStepIndex: 2,
+          totalSteps: 4,
         }}
-      />,
-      { context }
+      >
+        <Progress
+          render={({ percentage: p }) => {
+            percentage = p;
+            return null;
+          }}
+        />
+      </WizardContext.Provider>,
     );
 
     expect(percentage).toEqual(75);
@@ -50,14 +72,21 @@ describe('Progress', () => {
 
   it('returns the completion percentage', () => {
     let percentage = null;
-    const context = { activeStepIndex: 3, totalSteps: 4 };
-    shallow(
-      <Progress
-        render={({ percentage: p }) => {
-          percentage = p;
+
+    mount(
+      <WizardContext.Provider
+        value={{
+          activeStepIndex: 3,
+          totalSteps: 4,
         }}
-      />,
-      { context }
+      >
+        <Progress
+          render={({ percentage: p }) => {
+            percentage = p;
+            return null;
+          }}
+        />
+      </WizardContext.Provider>,
     );
 
     expect(percentage).toEqual(100);

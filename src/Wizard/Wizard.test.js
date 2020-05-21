@@ -2,28 +2,25 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { mount, shallow } from 'enzyme';
 import Wizard from './Wizard';
+import WizardContext from '../context';
 
 const Steps = ({ children }) => children;
 Steps.defaultProps = {
   isSteps: true,
 };
 
-const Step = ({ children }, context) => {
-  if (typeof children === 'function') {
-    return children(context);
-  }
-  return children;
-};
-Step.defaultProps = {
-  isStep: true,
+const Step = ({ children }) => (
+  <WizardContext.Consumer>
+    {context => (typeof children === 'function' ? children(context) : children)}
+  </WizardContext.Consumer>
+);
+
+Step.propTypes = {
+  children: PropTypes.any,
 };
 
-Step.contextTypes = {
-  activeStepIndex: PropTypes.number.isRequired,
-  goToNextStep: PropTypes.func.isRequired,
-  goToPrevStep: PropTypes.func.isRequired,
-  goToStep: PropTypes.func.isRequired,
-  totalSteps: PropTypes.number.isRequired,
+Step.defaultProps = {
+  isStep: true,
 };
 
 describe('Wizard', () => {

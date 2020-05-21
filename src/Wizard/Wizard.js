@@ -1,6 +1,7 @@
-import { Component, Children } from 'react';
+import React, { Component, Children } from 'react';
 import PropTypes from 'prop-types';
 import { createMemoryHistory } from 'history';
+import WizardContext from '../context';
 
 const FIRST_STEP = 0;
 
@@ -23,19 +24,6 @@ class Wizard extends Component {
     this.goToPrevStep = this.goToPrevStep.bind(this);
     this.goToNextStep = this.goToNextStep.bind(this);
     this.goToStep = this.goToStep.bind(this);
-  }
-
-  getChildContext() {
-    const { totalSteps } = this.state;
-    const activeStepIndex = this.activeStepIndex;
-
-    return {
-      activeStepIndex,
-      goToNextStep: this.goToNextStep,
-      goToPrevStep: this.goToPrevStep,
-      goToStep: this.goToStep,
-      totalSteps,
-    };
   }
 
   componentDidUpdate(prevProps) {
@@ -146,22 +134,22 @@ class Wizard extends Component {
 
   render() {
     const { children, render } = this.props;
+    const { totalSteps } = this.state;
+    const context = {
+      activeStepIndex: this.activeStepIndex,
+      goToNextStep: this.goToNextStep,
+      goToPrevStep: this.goToPrevStep,
+      goToStep: this.goToStep,
+      totalSteps,
+    };
 
-    if (render) {
-      return render;
-    }
-
-    return children;
+    return (
+      <WizardContext.Provider value={context}>
+        {render ? render : children}
+      </WizardContext.Provider>
+    );
   }
 }
-
-Wizard.childContextTypes = {
-  activeStepIndex: PropTypes.number.isRequired,
-  goToNextStep: PropTypes.func.isRequired,
-  goToPrevStep: PropTypes.func.isRequired,
-  goToStep: PropTypes.func.isRequired,
-  totalSteps: PropTypes.number.isRequired,
-};
 
 Wizard.propTypes = {
   activeStepIndex: PropTypes.number,

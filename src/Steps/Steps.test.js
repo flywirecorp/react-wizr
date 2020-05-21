@@ -1,18 +1,21 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { mount } from 'enzyme';
 import Steps from './Steps';
+import WizardContext from '../context';
 
 describe('Steps', () => {
   it('renders the active step', () => {
     const FirstStep = () => null;
     const SecondStep = () => null;
-    const context = { activeStepIndex: 1 };
-    const wrapper = shallow(
-      <Steps>
-        <FirstStep />
-        <SecondStep />
-      </Steps>,
-      { context }
+    const activeStepIndex = 1;
+
+    const wrapper = mount(
+      <WizardContext.Provider value={{ activeStepIndex }}>
+        <Steps>
+          <FirstStep />
+          <SecondStep />
+        </Steps>
+      </WizardContext.Provider>,
     );
 
     expect(wrapper.contains(<FirstStep />)).toBe(false);

@@ -1,18 +1,19 @@
-import React from 'react';
+import React, { Children } from 'react';
 import PropTypes from 'prop-types';
+import WizardContext from '../context';
 
-const Steps = ({ children }, { activeStepIndex }) => {
-  const currentStep = React.Children.toArray(children)[activeStepIndex];
+const Steps = ({ children }) => (
+  <WizardContext.Consumer>
+    {({ activeStepIndex }) => Children.toArray(children)[activeStepIndex]}
+  </WizardContext.Consumer>
+);
 
-  return currentStep;
+Steps.propTypes = {
+  children: PropTypes.node.isRequired,
 };
 
 Steps.defaultProps = {
   isSteps: true,
-};
-
-Steps.contextTypes = {
-  activeStepIndex: PropTypes.number.isRequired,
 };
 
 export default Steps;

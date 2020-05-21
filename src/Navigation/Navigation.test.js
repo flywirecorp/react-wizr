@@ -1,14 +1,17 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { mount } from 'enzyme';
 import Navigation from './Navigation';
+import WizardContext from '../context';
 
 describe('Navigation', () => {
   it('renders its children', () => {
     const Children = () => null;
-    const wrapper = shallow(
-      <Navigation>
-        <Children />
-      </Navigation>
+    const wrapper = mount(
+      <WizardContext.Provider value={{}}>
+        <Navigation>
+          <Children />
+        </Navigation>
+      </WizardContext.Provider>,
     );
 
     expect(wrapper.contains(<Children />)).toBe(true);
@@ -25,15 +28,15 @@ describe('Navigation', () => {
 
     let navigationProps;
 
-    shallow(
-      <Navigation
-        render={(props) => {
-          navigationProps = props;
-        }}
-      />,
-      {
-        context,
-      }
+    mount(
+      <WizardContext.Provider value={context}>
+        <Navigation
+          render={props => {
+            navigationProps = props;
+            return null;
+          }}
+        />
+      </WizardContext.Provider>,
     );
 
     expect(navigationProps).toEqual(context);

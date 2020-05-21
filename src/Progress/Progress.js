@@ -1,18 +1,24 @@
+import React from 'react';
 import PropTypes from 'prop-types';
+import WizardContext from '../context';
 
-const Progress = ({ children, render }, { activeStepIndex, totalSteps }) => {
-  const percentage = ((activeStepIndex + 1) * 100) / totalSteps;
+const Progress = ({ children, render }) => (
+  <WizardContext.Consumer>
+    {({ activeStepIndex, totalSteps }) => {
+      const percentage = ((activeStepIndex + 1) * 100) / totalSteps;
 
-  if (render) {
-    return render({ percentage });
-  }
+      if (render) {
+        return render({ percentage });
+      }
 
-  return children({ percentage });
-};
+      return typeof children === 'function' ? children(percentage) : children;
+    }}
+  </WizardContext.Consumer>
+);
 
-Progress.contextTypes = {
-  activeStepIndex: PropTypes.number.isRequired,
-  totalSteps: PropTypes.number.isRequired,
+Progress.propTypes = {
+  children: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
+  render: PropTypes.func,
 };
 
 export default Progress;
