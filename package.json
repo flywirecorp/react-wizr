@@ -1,19 +1,21 @@
 {
   "name": "react-wizr",
-  "version": "2.4.1",
+  "version": "2.5.0",
   "files": [
     "lib"
   ],
   "main": "lib",
   "scripts": {
     "build": "babel src -d lib --copy-files",
+    "check:format": "npm run prettier -- --list-different",
     "clean": "rimraf lib",
-    "lint": "eslint --fix src",
+    "format": "npm run prettier -- --write",
+    "lint": "eslint --ext .js ./src",
     "prebuild": "npm run clean && npm run lint",
     "prepublish": "npm run build",
-    "test": "jest",
-    "test:update": "npm run test -- -u",
-    "test:watch": "jest --watch"
+    "prettier": "prettier \"**/*.js\"",
+    "test": "jest --watchAll",
+    "test:once": "jest"
   },
   "keywords": [
     "react",
@@ -28,111 +30,26 @@
     "type": "git",
     "url": "https://github.com/vigosan/react-wizr"
   },
-  "babel": {
-    "presets": [
-      "@babel/preset-env",
-      "@babel/preset-react"
-    ],
-    "plugins": [
-      "@babel/plugin-syntax-dynamic-import",
-      "@babel/plugin-syntax-import-meta",
-      "@babel/plugin-proposal-class-properties",
-      "@babel/plugin-proposal-json-strings",
-      [
-        "@babel/plugin-proposal-decorators",
-        {
-          "legacy": true
-        }
-      ],
-      "@babel/plugin-proposal-function-sent",
-      "@babel/plugin-proposal-export-namespace-from",
-      "@babel/plugin-proposal-numeric-separator",
-      "@babel/plugin-proposal-throw-expressions"
-    ]
-  },
-  "eslintConfig": {
-    "parser": "babel-eslint",
-    "env": {
-      "browser": true,
-      "es6": true,
-      "jest": true,
-      "node": true
-    },
-    "plugins": [
-      "standard",
-      "react",
-      "prettier"
-    ],
-    "extends": [
-      "standard",
-      "standard-react",
-      "prettier",
-      "prettier/react"
-    ],
-    "rules": {
-      "prettier/prettier": [
-        "error",
-        {
-          "singleQuote": true,
-          "semi": true
-        }
-      ],
-      "camelcase": [
-        "error",
-        {
-          "allow": [
-            "^UNSAFE_"
-          ]
-        }
-      ]
-    }
-  },
-  "jest": {
-    "setupFiles": [
-      "<rootDir>/__tests__/shim.js",
-      "<rootDir>/__tests__/config.js"
-    ],
-    "testMatch": [
-      "<rootDir>/src/**/?(*.)(spec|test).js"
-    ]
-  },
   "devDependencies": {
-    "@babel/cli": "^7.0.0",
-    "@babel/core": "^7.0.0",
-    "@babel/plugin-proposal-class-properties": "^7.0.0",
-    "@babel/plugin-proposal-decorators": "^7.0.0",
-    "@babel/plugin-proposal-export-namespace-from": "^7.0.0",
-    "@babel/plugin-proposal-function-sent": "^7.0.0",
-    "@babel/plugin-proposal-json-strings": "^7.0.0",
-    "@babel/plugin-proposal-numeric-separator": "^7.0.0",
-    "@babel/plugin-proposal-throw-expressions": "^7.0.0",
-    "@babel/plugin-syntax-dynamic-import": "^7.0.0",
-    "@babel/plugin-syntax-import-meta": "^7.0.0",
-    "@babel/preset-env": "^7.0.0",
-    "@babel/preset-react": "^7.0.0",
-    "babel-core": "^7.0.0-bridge.0",
-    "babel-eslint": "^10.0.3",
-    "babel-jest": "^23.4.2",
-    "enzyme": "^3.10.0",
-    "enzyme-adapter-react-16": "^1.14.0",
-    "eslint": "^6.5.1",
-    "eslint-config-prettier": "^6.3.0",
-    "eslint-config-standard": "^14.1.0",
-    "eslint-config-standard-react": "^9.2.0",
-    "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-node": "^10.0.0",
-    "eslint-plugin-prettier": "^3.1.1",
-    "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-react": "^7.15.1",
-    "eslint-plugin-standard": "^4.0.1",
-    "jest": "^24.9.0",
-    "prettier": "^1.18.2",
-    "react-test-renderer": "^16.10.2",
-    "rimraf": "^3.0.0"
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.6",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/preset-env": "^7.9.6",
+    "@babel/preset-react": "^7.9.4",
+    "babel-loader": "^8.1.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
+    "eslint": "^7.0.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-react": "^7.20.0",
+    "jest": "^26.0.1",
+    "prettier": "^2.0.5",
+    "react-test-renderer": "^16.13.1",
+    "rimraf": "^3.0.2"
   },
   "dependencies": {
     "history": "^4.10.1",
-    "react": "^16.10.2",
-    "react-dom": "^16.10.2"
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
   }
 }

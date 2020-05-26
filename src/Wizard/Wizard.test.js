@@ -2,28 +2,25 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { mount, shallow } from 'enzyme';
 import Wizard from './Wizard';
+import WizardContext from '../context';
 
 const Steps = ({ children }) => children;
 Steps.defaultProps = {
-  isSteps: true
+  isSteps: true,
 };
 
-const Step = ({ children }, context) => {
-  if (typeof children === 'function') {
-    return children(context);
-  }
-  return children;
+const Step = ({ children }) => (
+  <WizardContext.Consumer>
+    {context => (typeof children === 'function' ? children(context) : children)}
+  </WizardContext.Consumer>
+);
+
+Step.propTypes = {
+  children: PropTypes.any,
 };
+
 Step.defaultProps = {
-  isStep: true
-};
-
-Step.contextTypes = {
-  activeStepIndex: PropTypes.number.isRequired,
-  goToNextStep: PropTypes.func.isRequired,
-  goToPrevStep: PropTypes.func.isRequired,
-  goToStep: PropTypes.func.isRequired,
-  totalSteps: PropTypes.number.isRequired
+  isStep: true,
 };
 
 describe('Wizard', () => {
@@ -39,7 +36,10 @@ describe('Wizard', () => {
 
     beforeEach(() => {
       wrapper = mount(
-        <Wizard onStepChanged={onStepChanged} onWizardFinished={onWizardFinished}>
+        <Wizard
+          onStepChanged={onStepChanged}
+          onWizardFinished={onWizardFinished}
+        >
           <Steps>
             <Step id="first">
               {({
@@ -47,7 +47,7 @@ describe('Wizard', () => {
                 goToNextStep: wizardGoToNextStep,
                 goToPrevStep: wizardGoToPrevStep,
                 goToStep: wizardGoToStep,
-                totalSteps: wizardTotalSteps
+                totalSteps: wizardTotalSteps,
               }) => {
                 activeStepIndex = wizardActiveStepIndex;
                 goToNextStep = wizardGoToNextStep;
@@ -59,7 +59,7 @@ describe('Wizard', () => {
             </Step>
             <Step id="second">2</Step>
           </Steps>
-        </Wizard>
+        </Wizard>,
       );
     });
 
@@ -114,7 +114,7 @@ describe('Wizard', () => {
       goToNextStep();
 
       expect(onWizardFinished).toHaveBeenCalled();
-    })
+    });
 
     it('moves back to prev step', () => {
       goToStep(secondStep);
@@ -135,7 +135,7 @@ describe('Wizard', () => {
 
       expect(onStepChanged).toBeCalledWith({
         activeStepIndex: 1,
-        step: { id: 'second' }
+        step: { id: 'second' },
       });
     });
   });
@@ -154,7 +154,7 @@ describe('Wizard', () => {
               }}
             </Step>
           </Steps>
-        </Wizard>
+        </Wizard>,
       );
 
       expect(activeStepIndex).toBe(1);
@@ -164,9 +164,13 @@ describe('Wizard', () => {
   describe('passing activeStepIndex prop', () => {
     it('keeps the state in the component rendering the wizard,', () => {
       class ControlledWizard extends React.Component {
-        state = {
-          activeStepIndex: 0
-        };
+        constructor(props) {
+          super(props);
+
+          this.state = {
+            activeStepIndex: 0,
+          };
+        }
 
         render() {
           return (
@@ -205,7 +209,7 @@ describe('Wizard', () => {
       const history = {
         listen: () => {},
         push,
-        replace
+        replace,
       };
 
       const wrapper = mount(
@@ -218,7 +222,7 @@ describe('Wizard', () => {
             </Step>
             <Step id="second">2</Step>
           </Steps>
-        </Wizard>
+        </Wizard>,
       );
 
       expect(replace).toHaveBeenCalledWith('/steps/first');
@@ -235,7 +239,7 @@ describe('Wizard', () => {
         const history = {
           listen: () => {},
           push,
-          replace
+          replace,
         };
 
         mount(
@@ -244,7 +248,7 @@ describe('Wizard', () => {
               {false && <Step id="first">1</Step>}
               <Step id="second">2</Step>
             </Steps>
-          </Wizard>
+          </Wizard>,
         );
 
         expect(replace).not.toHaveBeenCalledWith('/steps/first');
@@ -256,11 +260,11 @@ describe('Wizard', () => {
       const component = shallow(
         <Wizard>
           <Steps />
-        </Wizard>
+        </Wizard>,
       );
 
       it('sets new steps', () => {
-        const spy = jest.spyOn(Wizard.prototype, 'setSteps');
+        const spy = jest.spyOn(Wizard.prototype, 'steps', 'get');
         component.setProps({ children: <Steps /> });
 
         expect(spy).toHaveBeenCalledTimes(1);
@@ -268,7 +272,7 @@ describe('Wizard', () => {
       });
 
       it('does not set new steps when children are not updated', () => {
-        const spy = jest.spyOn(Wizard.prototype, 'setSteps');
+        const spy = jest.spyOn(Wizard.prototype, 'steps', 'get');
         component.setProps({ aProp: 'prop' });
 
         expect(spy).not.toHaveBeenCalled();
