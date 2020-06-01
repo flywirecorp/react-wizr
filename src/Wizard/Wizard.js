@@ -27,6 +27,10 @@ class Wizard extends Component {
   }
 
   componentDidUpdate(prevProps) {
+    this.updateStepsIfNeeded(prevProps);
+  }
+
+  updateStepsIfNeeded(prevProps) {
     if (prevProps.children !== this.props.children) {
       const steps = this.steps;
       this.setState({ steps, totalSteps: steps.length });
@@ -145,7 +149,7 @@ class Wizard extends Component {
 
     return (
       <WizardContext.Provider value={context}>
-        {render ? render : children}
+        {render || children}
       </WizardContext.Provider>
     );
   }

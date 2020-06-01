@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-const Step = ({ children, render }) => (render ? render : children);
+const Step = ({ children, render }) => render || children;
 
 Step.propTypes = {
   children: PropTypes.node,
